@@ -1,3 +1,6 @@
 [submodule "third_party/mjlab"]
 	path = third_party/mjlab
 	url = https://github.com/mujocolab/mjlab.git
+[submodule "third_party/FlashSAC"]
+	path = third_party/FlashSAC
+	url = git@github.com:Holiday-Robot/FlashSAC.git

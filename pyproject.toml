@@ -1,0 +1,19 @@
+[project]
+name = "humanoid-rl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "JJUNE0", email = "bjy6614@naver.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "mjlab>=1.6.0",
+]
+
+[project.scripts]
+humanoid-rl = "humanoid_rl:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"

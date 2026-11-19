@@ -4,3 +4,15 @@
 [submodule "third_party/FlashSAC"]
 	path = third_party/FlashSAC
 	url = git@github.com:Holiday-Robot/FlashSAC.git
+[submodule "third_party/BFM-Zero"]
+	path = third_party/BFM-Zero
+	url = https://github.com/LeCAR-Lab/BFM-Zero.git
+[submodule "third_party/loco-mujoco"]
+	path = third_party/loco-mujoco
+	url = https://github.com/robfiras/loco-mujoco.git
+[submodule "third_party/mjlab_research"]
+	path = third_party/mjlab_research
+	url = https://github.com/HybridRobotics/mjlab_research.git
+[submodule "third_party/supermimic"]
+	path = third_party/supermimic
+	url = https://github.com/HybridRobotics/supermimic.git

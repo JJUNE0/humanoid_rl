@@ -16,6 +16,56 @@ import tempfile
 import time
 
 
+def parse_tasks_cfg(raw_tasks):
+    """Deserialize optional JSON runner.tasks dict into SuperMimic TasksCfg."""
+    from supermimic.tasks.task_spec import TasksCfg, VelocityTaskCfg
+
+    if not raw_tasks:
+        return TasksCfg()
+    unknown = set(raw_tasks) - {"velocity"}
+    if unknown:
+        raise ValueError(f"Unknown runner.tasks keys: {sorted(unknown)}")
+    vel_raw = dict(raw_tasks.get("velocity", {}))
+    vel_kwargs = {k: tuple(v) if isinstance(v, list) else v for k, v in vel_raw.items()}
+    return TasksCfg(velocity=VelocityTaskCfg(**vel_kwargs))
+
+
+def build_locomotion_frame_sampler(packed_dir, motion, allowlist_path, device):
+    """Build speed-stratified (stand/walk/run) frame indices & sampling weights for velocity slots."""
+    import torch
+
+    motion_names = json.loads((Path(packed_dir) / "motion_names.json").read_text())
+    allow_data = json.loads(Path(allowlist_path).read_text())
+    allow_prefixes = set(allow_data["sequence_prefixes"])
+    ends = motion.motion_ends.detach().cpu().tolist()
+    frame_chunks = []
+    for c_idx, name in enumerate(motion_names):
+        prefix = "/".join(name.split("/")[:2])
+        if prefix in allow_prefixes:
+            s = 0 if c_idx == 0 else int(ends[c_idx - 1])
+            e = int(ends[c_idx])
+            stop = max(s + 1, e - 10)
+            frame_chunks.append(torch.arange(s, stop, dtype=torch.long, device=device))
+    if not frame_chunks:
+        raise ValueError(f"No packed clips matched velocity_allowlist: {allowlist_path}")
+    frame_ids = torch.cat(frame_chunks, dim=0)
+    v_xy = torch.linalg.vector_norm(motion.root_lin_vel_w[frame_ids, :2], dim=-1)
+    stand_mask = v_xy < 0.10
+    walk_mask = (v_xy >= 0.10) & (v_xy < 1.60)
+    run_mask = v_xy >= 1.60
+    probs = torch.zeros_like(v_xy, dtype=torch.float32)
+    for mask, target_mass in ((stand_mask, 0.25), (walk_mask, 0.50), (run_mask, 0.25)):
+        cnt = int(mask.sum().item())
+        if cnt > 0:
+            probs[mask] = target_mass / cnt
+    total = float(probs.sum().item())
+    if total <= 0.0:
+        probs.fill_(1.0 / frame_ids.numel())
+    else:
+        probs /= total
+    return frame_ids, probs
+
+
 def check_resume_settings(prior, current):
     """Batch sizes and update frequency may change; model and task stay fixed."""
     before, after = deepcopy(prior["runner"]), deepcopy(current["runner"])
@@ -71,6 +121,7 @@ def train(settings, output, resume=None, *, benchmark=False):
     from supermimic.models import Dynamics
     from supermimic.representations import GenCoordRepresentation
     from supermimic.runners.supermimic_runner import SuperMimicRunner, SuperMimicRunnerCfg
+    from supermimic.tasks.task_spec import TasksCfg, VelocityTaskCfg
     from supermimic.utils.tracking_reward import tracking_reward
 
     from humanoid_rl.algorithm.supermimic.motions import prepare
@@ -79,14 +130,8 @@ def train(settings, output, resume=None, *, benchmark=False):
     from humanoid_rl.env.actions import joint_range_targets
     from humanoid_rl.launchers.config import write_json
     from humanoid_rl.tasks.motion_tracking.light_supermimic import (
-        FOOT_BODY_NAMES,
-        SOLE_OFFSETS_LOCAL,
-        build_whole_body_contact_tensors,
-        compute_soft_footstep_cost,
-        compute_whole_body_contact_cost,
+        configure_light_representation,
         make_cfg,
-        resolve_soft_footstep_cfg,
-        resolve_whole_body_contact_cfg,
     )
     from robots.humanoid.humanoid_light.config import ASSET_DIR
 
@@ -110,13 +155,15 @@ def train(settings, output, resume=None, *, benchmark=False):
     config = dict(settings["runner"])
     policy = ActorCriticPolicyLearnerCfg(**config.pop("policy"))
     wm_cfg = WorldModelLearnerCfg(**config.pop("wm"))
+    tasks_cfg = parse_tasks_cfg(config.pop("tasks", None))
+    vel_allowlist = config.pop("velocity_allowlist", None)
     cfg = SuperMimicRunnerCfg(**{k: tuple(v) if isinstance(v, list) else v for k, v in config.items()},
-                             wm=wm_cfg, policy=policy, buffer_size=training["buffer_size"])
+                             tasks=tasks_cfg, wm=wm_cfg, policy=policy, buffer_size=training["buffer_size"])
     if training["buffer_size"] < max(wm_cfg.horizon, cfg.history_length):
         raise ValueError("Replay must cover the world-model window and policy history")
-    if training["warmup_steps"] < wm_cfg.horizon:
-        raise ValueError("Warmup must cover a complete world-model window")
-    if cfg.sampling_mode not in ("uniform", "return", "adaptive", "start") or cfg.actor_obs != "rep_state":
+    if training["warmup_steps"] < max(wm_cfg.horizon, cfg.history_length):
+        raise ValueError("Warmup must cover the world-model window and policy history")
+    if cfg.sampling_mode not in ("uniform", "return", "adaptive", "start") or cfg.actor_obs not in ("rep_state", "proprio"):
         raise ValueError("Unsupported Light SuperMimic sampling_mode or actor_obs")
     environment_cfg = make_cfg(packed, settings["environment"], training["num_envs"], training["seed"],
                                sampling_mode=cfg.sampling_mode)
@@ -159,152 +206,90 @@ def train(settings, output, resume=None, *, benchmark=False):
             limits = torch.stack((self.joint_lower, self.joint_upper), -1)
             return joint_range_targets(action, self.action_offset, limits)
 
-    class SoftFootstepGenCoordRepresentation(GenCoordRepresentation):
-        def compute_wm_reward_from_reference(
-            self,
-            next_rep_state,
-            next_aux_state,
-            next_joint_state,
-            action,
-            last_action,
-            target_body_pos_w,
-            target_body_quat_w,
-            target_body_lin_vel_w,
-            target_body_ang_vel_w,
-        ):
-            pred_pos, pred_rot_mat, pred_lin_vel, pred_ang_vel = self.world_frame_bodies(
-                next_aux_state, next_rep_state
-            )
-            base = tracking_reward(
-                next_aux_state,
-                pred_pos,
-                pred_rot_mat,
-                pred_lin_vel,
-                pred_ang_vel,
-                next_joint_state,
-                action,
-                last_action,
-                target_body_pos_w,
-                target_body_quat_w,
-                target_body_lin_vel_w,
-                target_body_ang_vel_w,
-                self._soft_joint_pos_limits,
-                self.dt,
-            )
-            f0, f1 = self._foot_body_indices
-            foot_pos = torch.stack((pred_pos[..., f0, :], pred_pos[..., f1, :]), dim=-2)
-            foot_rot = torch.stack((pred_rot_mat[..., f0, :, :], pred_rot_mat[..., f1, :, :]), dim=-3)
-            foot_lin_vel = torch.stack((pred_lin_vel[..., f0, :], pred_lin_vel[..., f1, :]), dim=-2)
-            foot_ang_vel = torch.stack((pred_ang_vel[..., f0, :], pred_ang_vel[..., f1, :]), dim=-2)
-            cost = compute_soft_footstep_cost(
-                foot_pos,
-                foot_rot,
-                foot_lin_vel,
-                foot_ang_vel,
-                action,
-                last_action,
-                self._sole_offsets_local,
-                **self._soft_footstep_params,
-            )
-            return base - self.dt * cost
-
-    class WholeBodyContactGenCoordRepresentation(GenCoordRepresentation):
-        def compute_wm_reward_from_reference(
-            self,
-            next_rep_state,
-            next_aux_state,
-            next_joint_state,
-            action,
-            last_action,
-            target_body_pos_w,
-            target_body_quat_w,
-            target_body_lin_vel_w,
-            target_body_ang_vel_w,
-        ):
-            pred_pos, pred_rot_mat, pred_lin_vel, pred_ang_vel = self.world_frame_bodies(
-                next_aux_state, next_rep_state
-            )
-            base = tracking_reward(
-                next_aux_state,
-                pred_pos,
-                pred_rot_mat,
-                pred_lin_vel,
-                pred_ang_vel,
-                next_joint_state,
-                action,
-                last_action,
-                target_body_pos_w,
-                target_body_quat_w,
-                target_body_lin_vel_w,
-                target_body_ang_vel_w,
-                self._soft_joint_pos_limits,
-                self.dt,
-            )
-            cost = compute_whole_body_contact_cost(
-                pred_pos,
-                pred_rot_mat,
-                pred_lin_vel,
-                pred_ang_vel,
-                target_body_pos_w,
-                target_body_quat_w,
-                action,
-                last_action,
-                self._wb_body_idx,
-                self._wb_local_offsets,
-                self._wb_radii,
-                self._wb_impact_w,
-                self._wb_slip_w,
-                self._wb_forbid_w,
-                self._wb_unintend_w,
-                **self._wb_scalar_params,
-            )
-            return base - self.dt * cost
-
     class LightRunner(SuperMimicRunner):
         def _init_common(self):
             super()._init_common()
-            soft_cfg = resolve_soft_footstep_cfg(settings["environment"].get("soft_footstep"))
-            wb_cfg = resolve_whole_body_contact_cfg(settings["environment"].get("whole_body_contact"))
-            if soft_cfg["enabled"]:
-                body_names = self.motion_cmd.cfg.body_names
-                self._representation.__class__ = SoftFootstepGenCoordRepresentation
-                self._representation._foot_body_indices = tuple(
-                    body_names.index(name) for name in FOOT_BODY_NAMES
-                )
-                self._representation._soft_footstep_params = {
-                    k: v for k, v in soft_cfg.items() if k != "enabled"
-                }
-                self._representation.register_buffer(
-                    "_sole_offsets_local",
-                    torch.tensor(SOLE_OFFSETS_LOCAL, dtype=torch.float32, device=device),
-                )
-            elif wb_cfg["enabled"]:
-                body_names = self.motion_cmd.cfg.body_names
-                wb_tensors = build_whole_body_contact_tensors(body_names, wb_cfg, device=device)
-                self._representation.__class__ = WholeBodyContactGenCoordRepresentation
-                for bname, bval in wb_tensors.items():
-                    self._representation.register_buffer(f"_wb_{bname}", bval)
-                self._representation._wb_scalar_params = {
-                    k: wb_cfg[k]
-                    for k in (
-                        "v_free",
-                        "impact_height",
-                        "impact_tau",
-                        "slip_height",
-                        "slip_tau",
-                        "head_safe_height",
-                        "unintended_height",
-                        "ref_air_height",
-                        "ref_air_tau",
-                        "clear_tau",
-                        "extra_action_rate_weight",
-                    )
-                }
+            configure_light_representation(
+                self._representation,
+                self._sim_context,
+                settings["environment"],
+                self.motion_cmd.cfg.body_names,
+                device,
+            )
             if settings["environment"].get("action_mode", "joint_range") == "joint_range":
                 limits = self.env.unwrapped.scene["robot"].data.joint_pos_limits[0]
                 dynamics = LightDynamics(self._dynamics, self._representation, self._sim_context.output_dim, limits).to(device)
                 self._wm.dynamics = self._dynamics = dynamics
                 self.world_model_learner = WorldModelLearner(dynamics, self._representation, cfg.wm, device=device)
+
+        def _init_policy(self):
+            super()._init_policy()
+            self._sim_vel_lo = None
+            if vel_allowlist and self.cfg.slot_mix.get("velocity", 0.0) > 0.0:
+                if self.cfg.history_length != 1:
+                    raise ValueError("velocity_allowlist currently requires history_length == 1")
+                sim_slots = self.policy_learner.actor.slot_ranges(self.env.num_envs)
+                wm_slots = self.policy_learner.actor.slot_ranges(self.cfg.policy.batch_size)
+                sim_vel_lo, sim_vel_hi = sim_slots[1]
+                wm_vel_lo, wm_vel_hi = wm_slots[1]
+                if sim_vel_hi > sim_vel_lo and wm_vel_hi > wm_vel_lo:
+                    self._sim_vel_lo = sim_vel_lo
+                    self._loco_frame_ids, self._loco_frame_probs = build_locomotion_frame_sampler(
+                        packed, self.motion, vel_allowlist, device
+                    )
+                    print(
+                        f"[INFO] Velocity locomotion allowlist active: {self._loco_frame_ids.numel()} frames "
+                        f"(sim slots [{sim_vel_lo}, {sim_vel_hi}), wm slots [{wm_vel_lo}, {wm_vel_hi}))",
+                        flush=True,
+                    )
+                    rb = self.replay_buffer
+                    wm_batch = self.cfg.policy.batch_size
+
+                    def stratified_sample_initial_states():
+                        n = rb.num_transitions
+                        if n < 1:
+                            raise RuntimeError("sample_initial_states on empty buffer")
+                        base = rb._step if n == rb.buffer_size else 0
+                        mot_env = torch.randint(0, sim_vel_lo, (wm_vel_lo,), device=rb.device)
+                        vel_env = torch.randint(sim_vel_lo, rb.num_envs, (wm_batch - wm_vel_lo,), device=rb.device)
+                        env_idx = torch.cat((mot_env, vel_env), dim=0)
+                        slot = (base + torch.randint(0, n, (wm_batch,), device=rb.device)) % rb.buffer_size
+                        return rb._storage[env_idx, slot]
+
+                    self.wm_env.sample_initial_states = stratified_sample_initial_states
+
+        def _reset_velocity_envs(self, env_ids):
+            if env_ids.numel() == 0:
+                return
+            pick = torch.multinomial(self._loco_frame_probs, env_ids.numel(), replacement=True)
+            frames = self._loco_frame_ids[pick]
+            base_env = self.env.unwrapped
+            self.motion_cmd.set_time_steps(env_ids, frames)
+            self.motion_cmd._write_reference_state_to_sim(
+                env_ids,
+                self.motion.root_pos_w[frames] + base_env.scene.env_origins[env_ids],
+                self.motion.root_quat_w[frames],
+                self.motion.root_lin_vel_w[frames],
+                self.motion.root_ang_vel_w[frames],
+                self.motion_cmd.joint_pos[env_ids],
+                self.motion_cmd.joint_vel[env_ids],
+            )
+            base_env.scene.write_data_to_sim()
+            base_env.sim.forward()
+            self.motion_cmd.update_relative_body_poses()
+            base_env.sim.sense()
+            base_env.observation_manager.compute(update_history=True)
+
+        def _step_and_store(self, raw_actions, curr_states, actor_td=None, extra_fields=None):
+            next_obs, rewards, dones, extras = super()._step_and_store(
+                raw_actions, curr_states, actor_td=actor_td, extra_fields=extra_fields
+            )
+            if self._sim_vel_lo is not None:
+                vel_dones = dones[self._sim_vel_lo:].nonzero(as_tuple=False).squeeze(-1) + self._sim_vel_lo
+                if vel_dones.numel() > 0:
+                    self._reset_velocity_envs(vel_dones)
+                    next_obs = self.env.get_observations()
+            return next_obs, rewards, dones, extras
 
     env = CheckedEnv(ManagerBasedRlEnv(environment_cfg, device=device))
     try:
@@ -375,7 +360,10 @@ def train(settings, output, resume=None, *, benchmark=False):
                 directory.rename(destination)
             write_json(output / "latest.json", {"checkpoint": str(destination.relative_to(output)), **progress})
 
-        env.reset(); runner._seed_sim_history()
+        env.reset()
+        if runner._sim_vel_lo is not None:
+            runner._reset_velocity_envs(torch.arange(runner._sim_vel_lo, env.num_envs, device=device))
+        runner._seed_sim_history()
         last_save, collected = progress["env_steps"], 0
         initial_steps = progress["env_steps"]
         started = time.perf_counter()

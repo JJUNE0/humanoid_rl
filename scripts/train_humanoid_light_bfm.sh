@@ -10,4 +10,4 @@ fi
 export OMP_NUM_THREADS="${OMP_NUM_THREADS:-2}"
 export OPENBLAS_NUM_THREADS="${OPENBLAS_NUM_THREADS:-1}"
 export MUJOCO_GL="${MUJOCO_GL:-egl}"
-exec .venv/bin/python -u train.py --algorithm bfm_zero --task Humanoid-Light-Motion-Prior "$@"
+exec env PYTHONPATH=src .venv/bin/python -u -m humanoid_rl.train --algorithm bfm_zero --task Humanoid-Light-Motion-Prior "$@"

@@ -22,7 +22,7 @@ def parser():
     for name, help_text in (("launch", "Run locally, submit to Colab, or export a bundle"),
                             ("train", "Train on the current machine using a runtime profile")):
         command = commands.add_parser(name, help=help_text)
-        command.add_argument("--experiment", required=True, help="Name in configs/experiments, or a JSON path")
+        command.add_argument("--experiment", required=True, help="Name in src/humanoid_rl/configs/experiments, or a JSON path")
         command.add_argument("--runtime", default="local", help="local, colab, or a runtime JSON path")
         command.add_argument("--set", action="append", default=[], metavar="KEY=VALUE",
                              help="Override method settings, e.g. training.num_envs=64 (applied last)")
@@ -50,8 +50,8 @@ def inventory():
                            "description": method.description} for name, method in METHODS.items()},
         "experiments": {path.stem: {key: value for key, value in read_json(path).items()
                                     if key in ("method", "task", "robot", "description")}
-                        for path in sorted((ROOT / "configs/experiments").glob("*.json"))},
-        "runtimes": [path.stem for path in sorted((ROOT / "configs/runtimes").glob("*.json"))],
+                        for path in sorted((ROOT / "src/humanoid_rl/configs/experiments").glob("*.json"))},
+        "runtimes": [path.stem for path in sorted((ROOT / "src/humanoid_rl/configs/runtimes").glob("*.json"))],
     }
 
 

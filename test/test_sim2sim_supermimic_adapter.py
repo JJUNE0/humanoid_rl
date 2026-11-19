@@ -24,7 +24,7 @@ CKPT = (
 
 class Sim2SimAdapterParityTests(unittest.TestCase):
     def test_coupled_motor_slot_targets_match_isaaclab_and_mjlab_torque_identically(self):
-        from sim2sim_supermimic_adapter import (
+        from humanoid_rl.sim2sim.sim2sim_supermimic_adapter import (
             CONTROL_JSON_PATH,
             JOINT_NAMES,
             coupling_matrix,
@@ -89,7 +89,7 @@ class Sim2SimAdapterParityTests(unittest.TestCase):
             torch.testing.assert_close(isaac_joint_tau, mj_joint_tau, atol=1e-5, rtol=1e-5)
 
     def test_standalone_actor_and_obs_match_supermimic_upstream_when_available(self):
-        from sim2sim_supermimic_adapter import (
+        from humanoid_rl.sim2sim.sim2sim_supermimic_adapter import (
             PackedMotionLibrary,
             build_motion_actor_goal,
             build_rep_state,
@@ -101,7 +101,7 @@ class Sim2SimAdapterParityTests(unittest.TestCase):
         saved, _, _ = load_checkpoint_compat(CKPT, device="cpu")
         standalone = build_standalone_actor_from_saved(saved, device="cpu")
         packed = pack_manifest_pure_numpy(
-            REPO_ROOT / "configs/motions/light_supermimic_walk1.json",
+            REPO_ROOT / "src/humanoid_retarget/configs/motions/light_supermimic_walk1.json",
             repo_root=REPO_ROOT,
             split="train",
         )

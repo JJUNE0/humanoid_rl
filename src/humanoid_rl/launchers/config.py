@@ -33,7 +33,7 @@ def write_json(path, value):
 def load_named(value, category, root=ROOT):
     path = Path(value).expanduser()
     if not path.is_file():
-        path = root / "configs" / category / (str(value) + ".json")
+        path = root / "src/humanoid_rl/configs" / category / (str(value) + ".json")
     return read_json(path)
 
 
@@ -169,7 +169,7 @@ def resolve(experiment, runtime, *, root=ROOT, overrides=(), run_id=None, resume
     interval = runtime.get("sync_interval_seconds", 60)
     if not isinstance(interval, (int, float)) or not math.isfinite(interval) or interval < 1:
         raise ValueError("sync_interval_seconds must be a positive finite number")
-    environment = read_json(root / "environments" / (method.environment + ".json"))
+    environment = read_json(root / "src/humanoid_rl/environments" / (method.environment + ".json"))
     executable = Path(python).expanduser() if python else root / environment["venv"] / "bin/python"
     inputs = method.adapter().inputs(settings) + expand(experiment.get("inputs", []), paths)
     unique_inputs = {}

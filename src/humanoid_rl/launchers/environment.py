@@ -12,19 +12,19 @@ from humanoid_rl.methods import get_method
 
 def setup_commands(root, method_name, task=None):
     method = get_method(method_name, task)
-    profile = read_json(root / "environments" / (method.environment + ".json"))
+    profile = read_json(root / "src/humanoid_rl/environments" / (method.environment + ".json"))
     uv = shutil.which("uv") or "uv"
     python = root / profile["venv"] / "bin/python"
     if method.environment == "supermimic_light":
         commands = []
-        for relative, source in read_json(root / "environments/supermimic_sources.json").items():
+        for relative, source in read_json(root / "src/humanoid_rl/environments/supermimic_sources.json").items():
             destination = root / relative
             if not (destination / "pyproject.toml").is_file():
                 commands += [["git", "clone", "--no-checkout", "--filter=blob:none", source["url"], str(destination)],
                              ["git", "-C", str(destination), "fetch", "--depth", "1", "origin", source["revision"]],
                              ["git", "-C", str(destination), "checkout", "--detach", source["revision"]]]
         return commands + [["env", f"UV_PROJECT_ENVIRONMENT={python.parent.parent}", uv, "sync", "--locked", "--no-dev",
-                            "--project", str(root / "environments/light_supermimic"), "--python", profile["python"]]]
+                            "--project", str(root / "src/humanoid_rl/environments/light_supermimic"), "--python", profile["python"]]]
     if method.environment == "mjlab":
         command = [uv, "sync", "--locked", "--project", str(root), "--python", profile["python"]]
         for extra in profile.get("extras", []):
@@ -52,8 +52,8 @@ def setup(root, method, task=None):
 
 
 def probe(plan):
-    profile = read_json(plan.root / "environments" / (plan.method.environment + ".json"))
-    hint = f"python humanoid.py setup --method {plan.method.name} --task {plan.task}"
+    profile = read_json(plan.root / "src/humanoid_rl/environments" / (plan.method.environment + ".json"))
+    hint = f"uv run humanoid setup --method {plan.method.name} --task {plan.task}"
     if not Path(plan.python).is_file():
         raise ValueError(f"Method interpreter is missing: {plan.python}. "
                          f"Run {hint}")

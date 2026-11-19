@@ -89,10 +89,15 @@ def get_robot_spec(control):
     for pair in json.loads((ASSET_DIR/"collision_exclusions.json").read_text()):
         if frozenset((pair["first"], pair["second"])) not in existing:
             spec.add_exclude(bodyname1=pair["first"], bodyname2=pair["second"])
-    for geom in spec.geoms:
-        if geom.contype or geom.conaffinity:
-            geom.contype = geom.conaffinity = 1
-            geom.priority = 1
+    for body in spec.bodies:
+        idx = 0
+        for geom in body.geoms:
+            if geom.contype or geom.conaffinity:
+                geom.contype = geom.conaffinity = 1
+                geom.priority = 1
+                if not geom.name:
+                    geom.name = f"{body.name}_collision" if idx == 0 else f"{body.name}_collision_{idx}"
+                    idx += 1
     return spec
 
 
@@ -114,6 +119,13 @@ def get_action_scale(control):
 def get_robot_cfg(control=None):
     from mjlab.entity import EntityArticulationInfoCfg, EntityCfg
     control = load_control() if control is None else control
+    delay = control.get("actuator_delay", {})
+    delay_kwargs = dict(
+        delay_min_lag=int(delay.get("min_lag", 0)),
+        delay_max_lag=int(delay.get("max_lag", 0)),
+        delay_hold_prob=float(delay.get("hold_prob", 0.0)),
+        delay_update_period=int(delay.get("update_period", 0)),
+    )
     coupled_names, actuators = set(), []
     for pair, group_name in (("left_ankle", "ankles"), ("right_ankle", "ankles"),
                              ("torso", "torso_pitch_roll")):
@@ -127,9 +139,10 @@ def get_robot_cfg(control=None):
             target_names_expr=names, pair=pair, gear_ratio_1=group["gear_ratio_1"],
             gear_ratio_2=group["gear_ratio_2"], gamma=group["gamma"],
             stiffness=control["stiffness"][names[0]], damping=control["damping"][names[0]],
-            effort_limit=control["effort_limit"][names[0]]))
+            effort_limit=control["effort_limit"][names[0]], **delay_kwargs))
     actuators.extend(IdealPdActuatorCfg(target_names_expr=(name,), stiffness=control["stiffness"][name],
-                                      damping=control["damping"][name], effort_limit=control["effort_limit"][name])
+                                      damping=control["damping"][name], effort_limit=control["effort_limit"][name],
+                                      **delay_kwargs)
                      for name in JOINT_NAMES if name not in coupled_names)
     return EntityCfg(spec_fn=partial(get_robot_spec, control),
                      init_state=EntityCfg.InitialStateCfg(pos=(0., 0., control["root_height"]),

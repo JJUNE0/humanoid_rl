@@ -80,9 +80,9 @@ def main():
         torch.cuda.set_per_process_memory_fraction(args.gpu_fraction, device=0)
         print(f"PyTorch GPU allocation limit: {args.gpu_fraction:.0%} of GPU 0; "
               "MuJoCo/Warp allocations are monitored separately.", flush=True)
-        sys.argv = [str(ROOT/"train.py"), "--algorithm", "bfm_zero",
+        sys.argv = [str(ROOT/"src/humanoid_rl/train.py"), "--algorithm", "bfm_zero",
                     "--task", "Humanoid-Light-Motion-Prior"]
-        runpy.run_path(str(ROOT/"train.py"), run_name="__main__")
+        runpy.run_module("humanoid_rl.train", run_name="__main__")
         return
 
     group = cgroup_directory()

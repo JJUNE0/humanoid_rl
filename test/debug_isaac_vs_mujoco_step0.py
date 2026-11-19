@@ -25,7 +25,7 @@ USD_PATH = (
 DEFAULT_CHECKPOINT = (
     REPO_ROOT / "runs/light_supermimic_walk1_t4/t4_walk1_fixed_20261118/training"
 )
-DEFAULT_MANIFEST = REPO_ROOT / "configs/motions/light_supermimic_walk1.json"
+DEFAULT_MANIFEST = REPO_ROOT / "src/humanoid_retarget/configs/motions/light_supermimic_walk1.json"
 
 
 def main() -> None:
@@ -62,7 +62,7 @@ def main() -> None:
     from isaaclab.utils import configclass
 
     from lab.cocelo.assets.flamingo.humanoid_light_v1 import HUMANOID_LIGHT_CFG
-    from sim2sim_supermimic_adapter import (
+    from humanoid_rl.sim2sim.sim2sim_supermimic_adapter import (
         JOINT_NAMES,
         PackedMotionLibrary,
         build_motion_actor_goal,

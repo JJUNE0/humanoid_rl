@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -56,7 +57,8 @@ def run(job):
 
     def command(argv, cwd=None):
         emit("Running: " + repr(argv) + "\n")
-        with subprocess.Popen(argv, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+        env = (os.environ | {"PYTHONPATH": str(Path(cwd) / "src")}) if cwd else None
+        with subprocess.Popen(argv, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                               text=True, errors="replace", bufsize=1) as process:
             for line in process.stdout:
                 emit(line)
@@ -114,7 +116,7 @@ def run(job):
         command(["nvidia-smi"])
         if shutil.which("uv") is None:
             command([sys.executable, "-m", "pip", "install", "uv"])
-        command([sys.executable, str(repo / "humanoid.py"), "setup", "--method", bundle["method"],
+        command([sys.executable, "-m", "humanoid_rl", "setup", "--method", bundle["method"],
                  "--task", bundle["task"]], cwd=repo)
         status["state"] = "running"
         publish()
@@ -128,7 +130,7 @@ def run(job):
 
         thread = threading.Thread(target=backup, daemon=True)
         thread.start()
-        argv = [sys.executable, str(repo / "humanoid.py"), "train", "--experiment",
+        argv = [sys.executable, "-m", "humanoid_rl", "train", "--experiment",
                 str(bundle_dir / "experiment.json"), "--runtime", str(bundle_dir / "runtime.json"),
                 "--run-id", bundle["run_id"]]
         if resume:

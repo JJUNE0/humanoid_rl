@@ -43,7 +43,7 @@ def provenance(root):
 
 def source_files(root):
     root = Path(root).resolve()
-    prefixes = ("src", "configs", "environments", "patches", "scripts", "docs",
+    prefixes = ("src", "scripts", "docs",
                 "third_party/BFM-Zero/humanoidverse/agents",
                 "third_party/BFM-Zero/humanoidverse/utils",
                 "third_party/BFM-Zero/humanoidverse/config",
@@ -63,7 +63,7 @@ def source_files(root):
                     continue
                 if path.suffix.lower() in SOURCE_SUFFIXES or path.name.upper().startswith(("LICENSE", "COPYING")):
                     files.add(path)
-    for name in ("humanoid.py", "train.py", "play.py", "pyproject.toml", "uv.lock", ".python-version", "README.md",
+    for name in ("pyproject.toml", "uv.lock", ".python-version", "README.md",
                  "third_party/BFM-Zero/humanoidverse/__init__.py",
                  "third_party/BFM-Zero/LICENSE", "third_party/FlashSAC/LICENSE"):
         path = root / name

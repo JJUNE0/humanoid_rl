@@ -23,7 +23,7 @@ import torch
 from mjlab.envs import ManagerBasedRlEnv
 
 from humanoid_rl.tasks.motion_tracking.light_supermimic import make_cfg
-from sim2sim_supermimic_adapter import (
+from humanoid_rl.sim2sim.sim2sim_supermimic_adapter import (
     JOINT_NAMES,
     PackedMotionLibrary,
     build_motion_actor_goal,
@@ -39,7 +39,7 @@ from sim2sim_supermimic_adapter import (
 DEFAULT_CHECKPOINT = (
     REPO_ROOT / "runs/light_supermimic_walk1_t4/t4_walk1_fixed_20261118/training"
 )
-DEFAULT_MANIFEST = REPO_ROOT / "configs/motions/light_supermimic_walk1.json"
+DEFAULT_MANIFEST = REPO_ROOT / "src/humanoid_retarget/configs/motions/light_supermimic_walk1.json"
 
 
 def main() -> None:

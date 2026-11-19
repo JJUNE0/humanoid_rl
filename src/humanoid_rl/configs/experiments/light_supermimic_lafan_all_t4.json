@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "light_supermimic_lafan_all_t4",
+  "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking",
+  "robot": "humanoid_light",
+  "description": "Full LAFAN1 (64 sequences, 668k frames, 1888 clips) Stage-1 training tuned for ~2h Colab T4 session; resumable onto T4/A100/RTX3090",
+  "config": {
+    "training": {
+      "num_envs": 1024,
+      "total_env_steps": 5632000,
+      "warmup_steps": 32,
+      "updates_per_step": 1,
+      "save_every": 512000,
+      "log_every": 20,
+      "compile": false,
+      "cuda_graphs": true,
+      "muon_dtype": "float16",
+      "buffer_size": 512
+    },
+    "motion": {
+      "manifest": "${data_root}/src/humanoid_retarget/configs/motions/light_supermimic_lafan_all.json"
+    },
+    "environment": {
+      "action_mode": "coupled_scale",
+      "action_scale": 0.25,
+      "key_bodies_only": true
+    },
+    "runner": {
+      "sampling_mode": "return",
+      "dynamics_hidden_dims": [1024, 1024, 1024],
+      "actor_hidden_dims": [1024, 1024, 512, 256],
+      "critic_hidden_dims": [512, 256],
+      "wm": {
+        "num_batches": 2,
+        "batch_size": 1024,
+        "horizon": 8
+      },
+      "policy": {
+        "num_batches": 1,
+        "batch_size": 1024,
+        "horizon": 32
+      }
+    }
+  },
+  "inputs": []
+}

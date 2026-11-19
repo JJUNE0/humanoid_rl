@@ -46,6 +46,9 @@ def inputs(settings):
         init_from = settings.get("training", {}).get("init_from")
         if init_from:
             result.append({"path": str(init_from), "kind": "file" if str(init_from).endswith(".pt") else "directory"})
+        vel_allow = settings.get("runner", {}).get("velocity_allowlist")
+        if vel_allow:
+            result.append({"path": str(vel_allow), "kind": "file"})
         return result
     training = settings["training"]
     result = []

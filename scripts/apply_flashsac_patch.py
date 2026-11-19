@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "third_party" / "FlashSAC"
-PATCH = ROOT / "patches" / "flashsac-mjlab.patch"
+PATCH = ROOT / "src" / "humanoid_rl" / "algorithm" / "flashsac" / "patches" / "flashsac-mjlab.patch"
 
 
 def main():

@@ -77,25 +77,28 @@ def notebook(bundle_dir="/content/drive/MyDrive/humanoid_rl/colab/REPLACE_WITH_B
              "if 'resume.zip' in bundle['archives']:\n"
              "    extract_verified('resume.zip', REPO / '_resume')\n"
              "subprocess.run(['nvidia-smi'], check=True)\n"),
-        cell("code", "subprocess.run([sys.executable, '-m', 'pip', 'install', 'uv'], check=True)\n"
-             "subprocess.run([sys.executable, str(REPO / 'humanoid.py'), 'setup',\n"
-             "                '--method', bundle['method'], '--task', bundle['task']], cwd=REPO, check=True)\n"),
+        cell("code", "import os\n"
+             "subprocess.run([sys.executable, '-m', 'pip', 'install', 'uv'], check=True)\n"
+             "subprocess.run([sys.executable, '-m', 'humanoid_rl', 'setup',\n"
+             "                '--method', bundle['method'], '--task', bundle['task']],\n"
+             "               cwd=REPO, env=os.environ | {'PYTHONPATH': str(REPO / 'src')}, check=True)\n"),
         cell("markdown", "## Run or resume\n\n"
              "The experiment includes CLI overrides from export. The exact resolved configuration, "
              "environment versions and source fingerprints are saved in the run folder. "
              "If data.zip was omitted, copy the inputs listed in inputs.json under REPO first. "
              "For a later session, set RESUME to a checkpoint copied back from Drive. "
              "Choose a new RUN_ID for each invocation; the saved weights continue into a new run folder.\n"),
-        cell("code", "RUN_ID = bundle['run_id']\n"
+        cell("code", "import os\n"
+             "RUN_ID = bundle['run_id']\n"
              "RESUME = str(REPO / '_resume' / bundle['resume']) if bundle.get('resume') else None\n"
-             "command = [sys.executable, str(REPO / 'humanoid.py'), 'train',\n"
+             "command = [sys.executable, '-m', 'humanoid_rl', 'train',\n"
              "           '--experiment', str(BUNDLE_DIR / 'experiment.json'),\n"
              "           '--runtime', str(BUNDLE_DIR / 'runtime.json'), '--run-id', RUN_ID]\n"
              "if RESUME:\n"
              "    command += ['--resume', RESUME]\n"
              "for override in bundle.get('overrides', []):\n"
              "    command += ['--set', override]\n"
-             "subprocess.run(command, cwd=REPO, check=True)\n"),
+             "subprocess.run(command, cwd=REPO, env=os.environ | {'PYTHONPATH': str(REPO / 'src')}, check=True)\n"),
     ]
     return dict(cells=cells, metadata=dict(kernelspec=dict(display_name="Python 3", language="python", name="python3"),
                  language_info=dict(name="python"), accelerator="GPU"), nbformat=4, nbformat_minor=5)

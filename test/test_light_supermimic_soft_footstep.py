@@ -192,6 +192,132 @@ class SoftFootstepBpttTests(unittest.TestCase):
         self.assertTrue(torch.isfinite(pred_lin_vel.grad).all())
         self.assertLess(float(pred_pos.grad[1, head_idx, 2].item()), -5.0)  # Pushes head UP away from floor!
 
+    def test_velocity_tasks_cfg_and_stratified_sampler(self) -> None:
+        import json
+        import tempfile
+        from pathlib import Path
+        from types import SimpleNamespace
+        from humanoid_rl.algorithm.supermimic.train import (
+            build_locomotion_frame_sampler,
+            parse_tasks_cfg,
+        )
+
+        tasks_cfg = parse_tasks_cfg(
+            {
+                "velocity": {
+                    "lin_vel_x_range": [-1.5, 2.8],
+                    "lin_vel_y_range": [-0.8, 0.8],
+                    "ang_vel_z_range": [-3.14, 3.14],
+                    "window_frames": 25,
+                    "command_noise": [0.15, 0.12, 0.25],
+                }
+            }
+        )
+        self.assertEqual(tasks_cfg.velocity.lin_vel_x_range, (-1.5, 2.8))
+        self.assertEqual(tasks_cfg.velocity.command_noise, (0.15, 0.12, 0.25))
+
+        with tempfile.TemporaryDirectory() as td:
+            pdir = Path(td)
+            (pdir / "motion_names.json").write_text(
+                json.dumps(["cmu/90_01/0-50", "cmu/49_01/0-50", "lafan/run1_subject2/0-50"])
+            )
+            allow = pdir / "allow.json"
+            allow.write_text(
+                json.dumps({"version": 1, "sequence_prefixes": ["cmu/49_01", "lafan/run1_subject2"]})
+            )
+            vel = torch.zeros((150, 3), dtype=torch.float32)
+            vel[50:65, 0] = 0.02   # stand in cmu/49_01
+            vel[65:100, 0] = 0.90  # walk in cmu/49_01
+            vel[100:150, 0] = 2.30 # run in lafan/run1_subject2
+            fake_motion = SimpleNamespace(
+                motion_ends=torch.tensor([50, 100, 150], dtype=torch.long),
+                root_lin_vel_w=vel,
+            )
+            f_ids, probs = build_locomotion_frame_sampler(pdir, fake_motion, allow, "cpu")
+            self.assertTrue((f_ids >= 50).all())  # cmu/90_01 backflip completely excluded!
+            self.assertAlmostEqual(float(probs.sum().item()), 1.0, places=5)
+
+    def test_s2r_goal_twist_dr_and_adapter_parity(self) -> None:
+        import sys
+        from pathlib import Path
+        from types import SimpleNamespace
+
+        test_dir = str(Path(__file__).resolve().parent)
+        if test_dir not in sys.path:
+            sys.path.insert(0, test_dir)
+        from humanoid_rl.tasks.motion_tracking.light_supermimic import (
+            motion_goal_window_with_twist,
+            resolve_domain_randomization_cfg,
+        )
+        from robots.humanoid.humanoid_light.mjlab import get_robot_spec, load_control
+        from humanoid_rl.sim2sim.sim2sim_supermimic_adapter import build_motion_actor_goal, build_proprio_obs
+        from supermimic.representations import (
+            _assemble_goal,
+            extract_actor_goal,
+            motion_anchor_window,
+        )
+
+        # 1. Foot collision geoms named in memory without touching humanoid_light.xml
+        mj_model = get_robot_spec(load_control()).compile()
+        geom_names = {mj_model.geom(i).name for i in range(mj_model.ngeom)}
+        self.assertIn("left_ankle_roll_link_collision", geom_names)
+        self.assertIn("right_ankle_roll_link_collision", geom_names)
+
+        dr = resolve_domain_randomization_cfg({"enabled": True, "foot_friction_range": [0.4, 1.25]})
+        self.assertTrue(dr["enabled"])
+        self.assertEqual(dr["foot_friction_range"], (0.4, 1.25))
+
+        # 2. Goal root twist (670-D wm_goal -> 640-D actor_goal) parity & mat-height invariance
+        T = 60
+        torch.manual_seed(7)
+        root_pos_w = torch.randn((T, 3))
+        q_raw = torch.randn((T, 4))
+        root_quat_w = q_raw / torch.linalg.vector_norm(q_raw, dim=-1, keepdim=True)
+        root_lin_vel_w = torch.randn((T, 3))
+        root_ang_vel_w = torch.randn((T, 3))
+        joint_pos = torch.randn((T, 26))
+        joint_vel = torch.randn((T, 26))
+        motion_ends = torch.tensor([T], dtype=torch.long)
+
+        fake_mot = SimpleNamespace(
+            root_pos_w=root_pos_w,
+            root_quat_w=root_quat_w,
+            root_lin_vel_w=root_lin_vel_w,
+            root_ang_vel_w=root_ang_vel_w,
+            joint_pos=joint_pos,
+            joint_vel=joint_vel,
+            motion_ends=motion_ends,
+        )
+        t_idx = torch.tensor([0, 12], dtype=torch.long)
+        r_pos = torch.zeros((2, 3))
+        r_quat = torch.tensor([[1.0, 0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0]])
+
+        content = motion_goal_window_with_twist(fake_mot, t_idx)
+        self.assertEqual(content.shape, (2, 580))
+        t_pos, t_quat = motion_anchor_window(fake_mot, t_idx)
+        wm_goal, actor_goal = _assemble_goal(content, r_pos, r_quat, t_pos, t_quat)
+        self.assertEqual(wm_goal.shape, (2, 670))
+        self.assertEqual(actor_goal.shape, (2, 640))
+        self.assertTrue(torch.allclose(extract_actor_goal(wm_goal), actor_goal, atol=1e-6))
+
+        # Raising clip height by +0.30 m (platform/mat) must NOT change actor_goal at all!
+        fake_mot_elevated = SimpleNamespace(
+            **{**fake_mot.__dict__, "root_pos_w": root_pos_w + torch.tensor([0.0, 0.0, 0.30])}
+        )
+        content_elev = motion_goal_window_with_twist(fake_mot_elevated, t_idx)
+        self.assertTrue(torch.allclose(content, content_elev, atol=1e-6))
+
+        # Sim2Sim adapter parity
+        adapter_goal = build_motion_actor_goal(
+            fake_mot, t_idx, r_pos, r_quat, goal_root_twist=True
+        )
+        self.assertTrue(torch.allclose(actor_goal, adapter_goal, atol=1e-5))
+
+        prop = build_proprio_obs(
+            r_quat, torch.zeros((2, 26)), torch.zeros((2, 3)), torch.zeros((2, 26)), torch.zeros((2, 26))
+        )
+        self.assertEqual(prop.shape, (2, 84))
+
 
 if __name__ == "__main__":
     unittest.main()

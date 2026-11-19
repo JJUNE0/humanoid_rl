@@ -1,0 +1,61 @@
+digraph G {
+rankdir=TB;
+graph [bgcolor="white", pad="0.4", nodesep="0.45", ranksep="0.65", fontname="Noto Sans CJK KR", fontsize=24, labelloc=t];
+node [shape=box, style="rounded,filled", color="#61718b", fontname="Noto Sans CJK KR", fontsize=15, fontcolor="#16243b", margin="0.2,0.15"];
+edge [color="#526985", fontname="Noto Sans CJK KR", fontsize=12, arrowsize=0.8];
+label="G1 · mjlab · FlashSAC + AMP\n별도 control critic / task reward = 0 / FB 없음";
+env [label="mjlab G1 환경\n29관절 PD + 물리 시뮬레이션\n박스·받침대 랜덤화 / 50 Hz", fillcolor="#e7f5ed"];
+obs [label="Actor observation: 148\nproprioception + box pose\n+ goal position + previous action\n+ hand/foot relative XYZ 12\n+ frozen stage context 28", fillcolor="#e7f5ed"];
+actor [label="Actor πθ\n입력 148 → action 29\n학습: 탐색 / play: tanh(mean)", fillcolor="#e8f2ff"];
+replay [label="동일 index의 replay 저장\n(o, a, o′, terminated, truncated)\n+ Φ(s), Φ(s′) 각각 83", fillcolor="#f1f4f8"];
+expert [label="Expert train: 350 clips\n50 Hz motion.npz\nphase 균형 sampling", fillcolor="#f1f4f8"];
+phi [label="공통 feature Φ: 83 / pair: 166\nheading 불변 + 동일 mjlab G1 FK\n로봇 동작만; box·goal·action 제외", fillcolor="#fff0dc"];
+dloss [label="Discriminator loss\nexpert target +1 / policy target −1\nleast squares + expert gradient penalty", fillcolor="#fff0dc"];
+disc [label="현재 Discriminator Dψ\n166 → 512 → 256 → 1\nFP32 / score는 확률이 아님", fillcolor="#fff0dc"];
+reward [label="AMP reward 재계산\nmax(0, 1 − 0.25(D − 1)²)\nreplay의 과거 reward를 덮어씀", fillcolor="#fff8cc"];
+norm [label="FlashSAC reward normalization\n현재 수집 reward의 return 통계\ncritic support: [−5, +5]", fillcolor="#fff8cc"];
+critic [label="Double categorical critic Q1, Q2\n입력 o(148) + a(29)\n각 head: 101 bins → scalar Q", fillcolor="#eee8fa"];
+target [label="Target Q1, Q2\ncritic과 동일 구조\noptimizer 없음 / EMA τ=0.01", fillcolor="#eee8fa"];
+alpha [label="Temperature α = exp(log α)\n학습되는 scalar / 초기 0.01\npolicy entropy로 업데이트", fillcolor="#e8f2ff"];
+validation [label="Held-out validation: 88 clips\nscore·reward·feature distance 측정\noptimizer 업데이트에 사용하지 않음", fillcolor="#f1f4f8"];
+env -> obs [label=""];
+obs -> actor [label=""];
+stage_mlp [label="Frozen carry MLP\n원본 규약 state101 → context28\nstage9 / skill9 / progress9 / current failure1\n정규화·확률 보정·가중치 고정", fillcolor="#f1f4f8"];
+env -> stage_mlp [label="상자 body-frame 변환 + env origin 제거"];
+stage_mlp -> obs [label="관측에만 추가 / task reward 없음"];
+actor -> env [constraint="false",color="#247254",label="action"];
+env -> replay [label="terminal 상태를 reset 전에 저장"];
+expert -> phi [label="동일 feature 변환"];
+env -> phi [constraint="false",label="s, s′"];
+phi -> dloss [label="expert pair"];
+replay -> dloss [label="policy pair"];
+dloss -> disc [label="ψ optimizer step"];
+replay -> disc [label="SAC batch의 pair"];
+disc -> reward [label="no_grad"];
+reward -> norm [label=""];
+norm -> critic [label="TD target reward"];
+actor -> critic [constraint="false",label="sampled action / log π"];
+critic -> actor [constraint="false",color="#7254a2",label="actor loss: α log π − min Q"];
+critic -> target [constraint="false",label="EMA"];
+target -> critic [constraint="false",label="next-state TD distribution"];
+actor -> alpha [constraint="false",label="entropy"];
+alpha -> critic [constraint="false",label="entropy term"];
+cost [label="제어 비용 6개 (reset 전)\naction rate / feet orientation / ankle roll\njoint limit / foot slip / undesired contact", fillcolor="#e7f5ed"];
+auxnorm [label="가중 음수 비용 → EMA std 정규화\nmean subtraction 없음 / decay=0.99", fillcolor="#fff8cc"];
+auxq [label="별도 scalar twin critic Q_aux\n입력 o(148) + a(29) → Q 2개\nFlashSAC trunk + unbounded scalar head", fillcolor="#eee8fa"];
+auxtarget [label="Target Q_aux: parameter EMA\ny = r_aux + γ(1−terminated) min Q_aux_next\nentropy bonus 없음", fillcolor="#eee8fa"];
+env -> cost [label=""];
+cost -> replay [label="동일 ring index 저장"];
+replay -> auxnorm [label="6개 raw cost"];
+auxnorm -> auxq [label="별도 TD 학습"];
+auxq -> auxtarget [constraint="false",label="EMA τ=0.01"];
+auxtarget -> auxq [constraint="false",label="bootstrap"];
+auxq -> actor [constraint="false",color="#7254a2",label="+ 0.02 · Q 크기 보정 · Q_aux\ncritic freeze; dQ/da 전달"];
+validation -> disc [style="dashed",constraint="false",label="평가만"];
+expert -> env [style="dashed",constraint="false",label="robot-only reference reset: 50%\n박스 파지는 강제하지 않음"];
+{rank=same; env; obs; actor;}
+{rank=same; expert; phi; replay; validation;}
+{rank=same; dloss; disc;}
+{rank=same; reward; norm; critic;}
+{rank=same; alpha; target;}
+}

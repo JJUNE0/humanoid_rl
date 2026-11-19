@@ -1,0 +1,9 @@
+{
+  "training": {
+    "buffer_size": 1280000,
+    "buffer_device": "cpu",
+    "save_every": 1024000,
+    "keep_checkpoints": 2,
+    "compile": true
+  }
+}

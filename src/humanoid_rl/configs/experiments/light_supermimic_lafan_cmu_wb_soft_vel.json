@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "name": "light_supermimic_lafan_cmu_wb_soft_vel",
+  "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking",
+  "robot": "humanoid_light",
+  "description": "Multi-task motion + joystick velocity fine-tuning on top of 3-tier whole-body soft-contact foundation (step_20481024), with speed-stratified flat locomotion allowlist for velocity slots",
+  "config": {
+    "training": {
+      "init_from": "${data_root}/runs/light_supermimic_lafan_cmu_wb_soft/rtx3090_lafan_cmu_wb_soft_20261119/training/checkpoints/step_20481024",
+      "num_envs": 1536,
+      "total_env_steps": 15360000,
+      "warmup_steps": 32,
+      "updates_per_step": 1,
+      "save_every": 3072000,
+      "log_every": 25,
+      "compile": true,
+      "cuda_graphs": true,
+      "muon_dtype": "bfloat16",
+      "buffer_size": 512
+    },
+    "motion": {
+      "manifest": "${data_root}/outputs/humanoid_light_bfm/manifest.json"
+    },
+    "environment": {
+      "action_mode": "coupled_scale",
+      "action_scale": 0.25,
+      "key_bodies_only": true,
+      "whole_body_contact": {
+        "enabled": true,
+        "impact_scale": 1.0,
+        "slip_scale": 1.0,
+        "v_free": 0.18,
+        "impact_height": 0.050,
+        "impact_tau": 0.012,
+        "slip_height": 0.010,
+        "slip_tau": 0.004,
+        "head_forbid_weight": 400.0,
+        "head_safe_height": 0.045,
+        "unintended_weight": 150.0,
+        "unintended_height": 0.025,
+        "ref_air_height": 0.060,
+        "ref_air_tau": 0.015,
+        "clear_tau": 0.008,
+        "extra_action_rate_weight": 0.08
+      }
+    },
+    "runner": {
+      "sampling_mode": "uniform",
+      "slot_mix": {
+        "motion": 0.65,
+        "velocity": 0.35
+      },
+      "latent_bc_weight": 0.15,
+      "velocity_allowlist": "${data_root}/src/humanoid_retarget/configs/motions/light_supermimic_velocity_allowlist.json",
+      "tasks": {
+        "velocity": {
+          "lin_vel_x_range": [-1.5, 2.8],
+          "lin_vel_y_range": [-0.8, 0.8],
+          "ang_vel_z_range": [-3.14, 3.14],
+          "window_frames": 25,
+          "command_noise": [0.15, 0.12, 0.25]
+        }
+      },
+      "dynamics_hidden_dims": [1024, 1024, 1024],
+      "actor_hidden_dims": [1024, 1024, 512, 256],
+      "critic_hidden_dims": [512, 256],
+      "wm": {
+        "num_batches": 2,
+        "batch_size": 1536,
+        "horizon": 8
+      },
+      "policy": {
+        "lr": 0.00015,
+        "num_batches": 1,
+        "batch_size": 1536,
+        "horizon": 32
+      }
+    }
+  },
+  "inputs": []
+}

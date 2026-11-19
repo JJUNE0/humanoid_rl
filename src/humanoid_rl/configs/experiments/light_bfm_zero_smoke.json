@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "name": "light_bfm_zero_smoke",
+  "method": "bfm_zero",
+  "task": "Humanoid-Light-Motion-Prior",
+  "robot": "humanoid_light",
+  "description": "Four environments and 40 transitions; execution check, not a learned policy.",
+  "config": {
+    "training": {
+      "num_envs": 4,
+      "total_env_steps": 40,
+      "buffer_size": 128,
+      "min_buffer": 16,
+      "batch_size": 16,
+      "updates_per_step": 1,
+      "seed_steps": 16,
+      "save_every": 40,
+      "log_every": 1,
+      "compile": false
+    },
+    "model": {
+      "hidden_dim": 64,
+      "hidden_layers": 2,
+      "embedding_layers": 2,
+      "backward_hidden_dim": 32,
+      "discriminator_hidden_dim": 32,
+      "discriminator_hidden_layers": 1,
+      "z_dim": 16,
+      "sequence_length": 8
+    },
+    "agent": {
+      "rollout_expert_trajectories_length": 16
+    },
+    "motion": {
+      "root": "${data_root}",
+      "manifest_root": "${data_root}",
+      "manifest": "${data_root}/outputs/humanoid_light_bfm_dev/manifest.json",
+      "cache_dir": "${cache_root}/bfm_zero/humanoid_light_smoke",
+      "max_frames": 64
+    },
+    "environment": {
+      "physics_dt": 0.0025,
+      "decimation": 8,
+      "lie_down_probability": 0.0
+    }
+  },
+  "inputs": []
+}

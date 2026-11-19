@@ -1,0 +1,14 @@
+{
+  "version": 1, "name": "light_supermimic_smoke", "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking", "robot": "humanoid_light",
+  "description": "Four worlds, 40 transitions and three WM/BPTT updates; execution check only",
+  "config": {
+    "training": {"num_envs": 4, "total_env_steps": 40, "warmup_steps": 8, "buffer_size": 32,
+                 "compile": false, "save_every": 40, "log_every": 1},
+    "motion": {"manifest": "${data_root}/outputs/humanoid_light_bfm_dev/manifest.json", "max_frames": 64},
+    "runner": {"dynamics_hidden_dims": [64, 64], "actor_hidden_dims": [64, 32], "critic_hidden_dims": [32, 32],
+               "wm": {"num_batches": 1, "batch_size": 4, "horizon": 4},
+               "policy": {"num_batches": 1, "batch_size": 4, "horizon": 4}}
+  },
+  "inputs": []
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "name": "colab",
+  "device": "cuda:0",
+  "data_root": "${repo}",
+  "cache_root": "/content/humanoid_cache",
+  "run_root": "/content/humanoid_runs",
+  "persistent_root": "/content/drive/MyDrive/humanoid_rl/runs",
+  "overrides": {
+    "supermimic": {
+      "training": {"num_envs": 1024, "compile": false, "cuda_graphs": true, "updates_per_step": 4, "muon_dtype": "float16"},
+      "runner": {"wm": {"batch_size": 256}, "policy": {"batch_size": 128}},
+      "tuning": {
+        "env_counts": [1024, 2048, 4096],
+        "measure_reference": false,
+        "wm_batch_size": 256,
+        "policy_batch_size": 128,
+        "measure_steps": 16,
+        "reference": {"num_envs": 64, "wm_batch_size": 64, "policy_batch_size": 32, "updates_per_step": 1},
+        "try_compile": true,
+        "compile_min_training_seconds": 1200,
+        "compile_timeout_seconds": 600,
+        "candidate_timeout_seconds": 900,
+        "minimum_free_memory_fraction": 0.12
+      }
+    }
+  },
+  "env": {"MUJOCO_GL": "egl", "OMP_NUM_THREADS": "2", "TORCHINDUCTOR_COMPILE_THREADS": "1"},
+  "sync_interval_seconds": 60
+}

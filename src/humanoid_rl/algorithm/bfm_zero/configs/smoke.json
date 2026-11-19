@@ -1,0 +1,29 @@
+{
+  "training": {
+    "num_envs": 4,
+    "total_env_steps": 40,
+    "buffer_size": 1024,
+    "min_buffer": 4,
+    "batch_size": 16,
+    "updates_per_step": 1,
+    "seed_steps": 4,
+    "save_every": 40,
+    "log_every": 1,
+    "log_dir": "outputs/bfm_zero_smoke"
+  },
+  "model": {
+    "hidden_dim": 64,
+    "hidden_layers": 2,
+    "embedding_layers": 2,
+    "backward_hidden_dim": 64,
+    "discriminator_hidden_dim": 64,
+    "discriminator_hidden_layers": 2,
+    "z_dim": 16
+  },
+  "motion": {
+    "files": [
+      "walk1_subject1.npz"
+    ],
+    "max_frames": 600
+  }
+}

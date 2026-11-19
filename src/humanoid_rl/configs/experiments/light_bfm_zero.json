@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "name": "light_bfm_zero",
+  "method": "bfm_zero",
+  "task": "Humanoid-Light-Motion-Prior",
+  "robot": "humanoid_light",
+  "description": "CMU/LAFAN motion prior. Experimental 2.5ms physics; long-run stability is unverified.",
+  "config": {
+    "training": {
+      "total_env_steps": 50000000
+    },
+    "motion": {
+      "root": "${data_root}",
+      "manifest_root": "${data_root}",
+      "manifest": "${data_root}/outputs/humanoid_light_bfm/manifest.json",
+      "cache_dir": "${cache_root}/bfm_zero/humanoid_light"
+    },
+    "environment": {
+      "physics_dt": 0.0025,
+      "decimation": 8,
+      "lie_down_probability": 0.0
+    }
+  },
+  "inputs": []
+}

@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "robot": "humanoid_light",
+  "splits": {
+    "train": [
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject1.npz",
+        "sha256": "b885cc7512e7d86046932d24bcbe76a09c36b0d58c878b1b4a5243a6da149447",
+        "source": "lafan",
+        "subject": 1,
+        "name": "walk1_subject1",
+        "start_frame": 0,
+        "stop_frame": 3493
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject1.npz",
+        "sha256": "b885cc7512e7d86046932d24bcbe76a09c36b0d58c878b1b4a5243a6da149447",
+        "source": "lafan",
+        "subject": 1,
+        "name": "walk1_subject1",
+        "start_frame": 3499,
+        "stop_frame": 10667
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject1.npz",
+        "sha256": "b885cc7512e7d86046932d24bcbe76a09c36b0d58c878b1b4a5243a6da149447",
+        "source": "lafan",
+        "subject": 1,
+        "name": "walk1_subject1",
+        "start_frame": 10673,
+        "stop_frame": 12800
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject1.npz",
+        "sha256": "b885cc7512e7d86046932d24bcbe76a09c36b0d58c878b1b4a5243a6da149447",
+        "source": "lafan",
+        "subject": 1,
+        "name": "walk1_subject1",
+        "start_frame": 12806,
+        "stop_frame": 12941
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject1.npz",
+        "sha256": "b885cc7512e7d86046932d24bcbe76a09c36b0d58c878b1b4a5243a6da149447",
+        "source": "lafan",
+        "subject": 1,
+        "name": "walk1_subject1",
+        "start_frame": 12947,
+        "stop_frame": 13065
+      }
+    ],
+    "validation": [
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 0,
+        "stop_frame": 209
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 237,
+        "stop_frame": 3568
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 3574,
+        "stop_frame": 5718
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 5724,
+        "stop_frame": 5925
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 5931,
+        "stop_frame": 7547
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 7553,
+        "stop_frame": 8565
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 8571,
+        "stop_frame": 10527
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/walk1_subject5.npz",
+        "sha256": "ca04f840269818f0902d71bc7a392095718aca79c7ebe087ca15fef22b6d7422",
+        "source": "lafan",
+        "subject": 5,
+        "name": "walk1_subject5",
+        "start_frame": 10533,
+        "stop_frame": 13065
+      }
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 .venv/
+.vscode/
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -11,3 +12,16 @@ wandb/
 videos/
 checkpoints/
 MUJOCO_LOG.TXT
+
+.venv_super_mimic/
+.venv_supermimic_light/
+runs/
+data/
+
+# Real motion files live here locally; keep provenance/manifests in Git.
+src/humanoid_retarget/datasets/**/*.bvh
+src/humanoid_retarget/datasets/**/*.npz
+src/humanoid_retarget/datasets/**/*.pkl
+src/humanoid_retarget/datasets/**/.downloads/
+src/humanoid_retarget/datasets/cmu/full/archives/
+src/humanoid_retarget/datasets/cmu/full/raw/

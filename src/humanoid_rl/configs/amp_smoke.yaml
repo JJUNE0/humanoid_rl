@@ -1,0 +1,4 @@
+# Same AmpConfig defaults as amp.yaml, with more frequent held-out evaluation.
+# Use with 8 envs x 10 vector steps (80 total transitions), small replay/warmup.
+data_root: /home/cocel/Desktop/Research/humanoid/I-BFM-Code/ibfm/tasks/carry_box/rollouts/carry_20_40_success500_v1
+validation_every: 2

@@ -1,0 +1,7 @@
+{
+  "python": "3.13",
+  "mjlab": "1.6.0",
+  "venv": ".venv",
+  "extras": ["bfm-zero"],
+  "description": "Existing FlashSAC/BFM environment; uv.lock at repository root"
+}

@@ -1,0 +1,3458 @@
+{
+  "source": "src/humanoid_retarget/datasets/lafan1/retargeted/g1/lafan_29dof_10s-clipped.pkl",
+  "source_sha256": "7f5aa36957808ee2e972472b18add8510533742710ba312d8b8c6e6014f1c010",
+  "method": "original MotionLibRobot FK, Gaussian velocities and get_motion_state interpolation",
+  "frequency": 50,
+  "state_dim": 64,
+  "privileged_dim": 463,
+  "clips": [
+    {
+      "file": "fallAndGetUp1_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject1_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject1_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject3_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject5_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip24.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject5_clip25.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject1_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip24.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip25.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject4_clip26.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject5_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip24.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip25.npz",
+      "frames": 499
+    },
+    {
+      "file": "sprint1_subject2_clip26.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject4_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject2_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject3_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance1_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject5_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp2_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject3_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "jumps1_subject2_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject4_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "run1_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip24.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject1_clip25.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "run2_subject4_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject1_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject1_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk4_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk2_subject3_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp1_subject1_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip24.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk1_subject2_clip25.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fallAndGetUp3_subject1_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "dance2_subject3_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fight1_subject2_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "walk3_subject5_clip23.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip0.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip1.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip2.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip3.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip4.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip5.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip6.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip7.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip8.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip9.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip10.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip11.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip12.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip13.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip14.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip15.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip16.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip17.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip18.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip19.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip20.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip21.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip22.npz",
+      "frames": 499
+    },
+    {
+      "file": "fightAndSports1_subject4_clip23.npz",
+      "frames": 499
+    }
+  ]
+}

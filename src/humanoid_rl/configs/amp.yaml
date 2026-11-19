@@ -1,0 +1,15 @@
+# Pure motion-style imitation: task reward and success termination are disabled.
+data_root: /home/cocel/Desktop/Research/humanoid/I-BFM-Code/ibfm/tasks/carry_box/rollouts/carry_20_40_success500_v1
+hidden_dims: [512, 256]
+learning_rate: 0.0001
+batch_size: 512
+gradient_penalty: 10.0
+weight_decay: 0.0001
+reward_scale: 1.0
+min_feature_std: 0.1
+phase_balanced: true
+# Robot pose/velocity only: box remains randomized; this does not force a grasp.
+reference_init_probability: 0.5
+validation_every: 100
+cache_dir: outputs/amp_cache
+max_motions: null

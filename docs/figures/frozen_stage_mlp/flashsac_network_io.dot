@@ -1,0 +1,36 @@
+digraph G {
+rankdir=LR;
+graph [bgcolor="white", pad="0.4", nodesep="0.45", ranksep="0.65", fontname="Noto Sans CJK KR", fontsize=24, labelloc=t];
+node [shape=box, style="rounded,filled", color="#61718b", fontname="Noto Sans CJK KR", fontsize=15, fontcolor="#16243b", margin="0.2,0.15"];
+edge [color="#526985", fontname="Noto Sans CJK KR", fontsize=12, arrowsize=0.8];
+label="FlashSAC 네트워크 입출력\n실제 checkpoint 구조 / 배치 차원 B는 생략";
+subgraph cluster_actor { label="Actor πθ"; color="#e8f2ff"; style="rounded"; fontsize=20;
+ain [label="Observation 148\n관절 위치 offset 29 + 속도 29\nbase v 3 + ω 3 + gravity 3\nbox 상대 위치 3 + 회전 6D\ngoal 상대 위치 3 + 이전 action 29\n양손·양발 root 상대 XYZ 12\nFrozen stage9 + skill9 + progress9 + failure1", fillcolor="#e8f2ff"];
+aembed [label="UnitBatchNorm(148)\nUnitLinear 148 → 128", fillcolor="#e8f2ff"];
+ablock [label="FlashSACBlock × 2\n128 → 512 → 128\nBN + ReLU / residual add\n마지막 UnitRMSNorm(128)", fillcolor="#e8f2ff"];
+ahead [label="NormalTanhPolicy\nmean μ: 29\nlog σ: 29, bound [−10, 2]", fillcolor="#e8f2ff"];
+aout [label="Action 29 ∈ [−1, 1]\n수집: tanh(μ + σ ε), 반복 탐색 noise\nplay: tanh(μ)\n학습 forward: action + log π", fillcolor="#e8f2ff"];
+ain -> aembed [label=""];
+aembed -> ablock [label=""];
+ablock -> ahead [label=""];
+ahead -> aout [label=""];
+}
+subgraph cluster_critic { label="Double critic Q1, Q2 — 두 head를 ensemble 연산으로 구현"; color="#eee8fa"; style="rounded"; fontsize=20;
+qin [label="concat(o, a): 177\nobservation 148 + action 29", fillcolor="#eee8fa"];
+qembed [label="EnsembleUnitBatchNorm\n각 head: UnitLinear 177 → 256", fillcolor="#eee8fa"];
+qblock [label="EnsembleFlashSACBlock × 2\n각 head: 256 → 1024 → 256\nBN + ReLU / residual add\n마지막 EnsembleUnitRMSNorm", fillcolor="#eee8fa"];
+qout [label="각 head: 101 categorical bins\nsoftmax → p(z | o, a)\nQ1, Q2 = Σ p(z) z\nz ∈ [-5, 5] (정규화된 return)", fillcolor="#eee8fa"];
+qt [label="Target Q1, Q2\n동일한 두-head 구조 / frozen gradient\nQ̄ ← (1−τ)Q̄ + τQ, τ=0.01", fillcolor="#eee8fa"];
+qin -> qembed [label=""];
+qembed -> qblock [label=""];
+qblock -> qout [label=""];
+qout -> qt [label="parameter EMA"];
+}
+subgraph cluster_temp { label="Temperature — MLP가 아닌 학습 scalar"; color="#fff8cc"; style="rounded"; fontsize=20;
+tin [label="policy entropy H\n+ target entropy\n(target σ = 0.15)", fillcolor="#fff8cc"];
+tlog [label="parameter log α: 1\nα = exp(log α) > 0\n초기 α = 0.01", fillcolor="#fff8cc"];
+tloss [label="Lα = α · (H − Htarget)\nactor·critic entropy 항에 α 전달", fillcolor="#fff8cc"];
+tin -> tloss [label=""];
+tlog -> tloss [label=""];
+}
+}

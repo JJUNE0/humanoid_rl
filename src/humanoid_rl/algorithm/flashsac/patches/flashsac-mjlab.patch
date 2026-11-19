@@ -1,0 +1,246 @@
+diff --git a/flash_rl/agents/flashSAC/agent.py b/flash_rl/agents/flashSAC/agent.py
+index 254e6f5..d0580e4 100644
+--- a/flash_rl/agents/flashSAC/agent.py
++++ b/flash_rl/agents/flashSAC/agent.py
+@@ -1,7 +1,7 @@
+ import math
+ import os
+ from dataclasses import dataclass, replace
+-from typing import Any, MutableMapping, Optional, cast
++from typing import Any, Callable, MutableMapping, Optional, cast
+ 
+ import gymnasium as gym
+ import torch
+@@ -267,6 +267,7 @@ def _update_networks(
+     do_actor_update: bool,
+     device: torch.device,
+     grad_scaler: Optional[GradScaler],
++    actor_q_bonus: Optional[Callable] = None,
+ ) -> dict[str, torch.Tensor]:
+     if do_actor_update:
+         # Update actor
+@@ -279,6 +280,7 @@ def _update_networks(
+             device=device,
+             use_amp=cfg.use_amp,
+             grad_scaler=grad_scaler,
++            actor_q_bonus=actor_q_bonus,
+         )
+ 
+         # Update temperature
+@@ -426,6 +428,8 @@ class FlashSACAgent(BaseAgent[FlashSACConfig]):
+         interaction_step: int,
+         prev_transition: MutableMapping[str, Tensor],
+         training: bool,
++        *,
++        return_tensor: bool = False,
+     ) -> Tensor:
+         if training:
+             temperature = 1.0
+@@ -454,7 +458,7 @@ class FlashSACAgent(BaseAgent[FlashSACConfig]):
+                 zeta_cdf=self._zeta_cdf,
+             )
+ 
+-        return actions.cpu().numpy()
++        return actions if return_tensor else actions.cpu().numpy()
+ 
+     def process_transition(self, transition: MutableMapping[str, Tensor]) -> None:
+         # add to replay buffer
+@@ -472,12 +476,20 @@ class FlashSACAgent(BaseAgent[FlashSACConfig]):
+     def can_start_training(self) -> bool:
+         return self._replay_buffer.can_sample()
+ 
+-    def update(self) -> dict[str, Any]:
++    def update(
++        self,
++        *,
++        batch_transform: Optional[Callable[[dict[str, torch.Tensor]], dict[str, torch.Tensor]]] = None,
++        actor_q_bonus: Optional[Callable] = None,
++    ) -> dict[str, Any]:
+         batch = cast(dict[str, torch.Tensor], self._replay_buffer.sample())
+ 
+         for k, v in batch.items():
+             batch[k] = v.to(self._device, non_blocking=True)
+ 
++        if batch_transform is not None:
++            batch = batch_transform(batch)
++
+         if self._cfg.asymmetric_observation:
+             batch["actor_observation"] = batch["observation"][:, : self._actor_observation_dim]
+             batch["actor_next_observation"] = batch["next_observation"][:, : self._actor_observation_dim]
+@@ -501,6 +513,7 @@ class FlashSACAgent(BaseAgent[FlashSACConfig]):
+             do_actor_update=(self._update_step % self._cfg.actor_update_period == 0),
+             device=self._device,
+             grad_scaler=self._grad_scaler,
++            actor_q_bonus=actor_q_bonus,
+         )
+         self._update_step += 1
+ 
+@@ -547,7 +560,8 @@ class FlashSACAgent(BaseAgent[FlashSACConfig]):
+             assert os.path.exists(agent_state_path)
+             agent_state = torch.load(agent_state_path, map_location=self._device)
+             self._update_step = agent_state["update_step"]
+-            self._grad_scaler.load_state_dict(agent_state["grad_scaler_state_dict"])
++            if agent_state["grad_scaler_state_dict"]:
++                self._grad_scaler.load_state_dict(agent_state["grad_scaler_state_dict"])
+ 
+         if self._cfg.load_reward_normalizer:
+             assert self.reward_normalizer is not None
+diff --git a/flash_rl/agents/flashSAC/update.py b/flash_rl/agents/flashSAC/update.py
+index 2686b06..8608de1 100644
+--- a/flash_rl/agents/flashSAC/update.py
++++ b/flash_rl/agents/flashSAC/update.py
+@@ -1,4 +1,4 @@
+-from typing import Any, Optional
++from typing import Any, Callable, Optional
+ 
+ import torch
+ from torch.amp.grad_scaler import GradScaler
+@@ -35,7 +35,7 @@ def _compute_categorical_td_target(
+     reward: torch.Tensor,  # (B,)
+     done: torch.Tensor,  # (B,)
+     actor_entropy: torch.Tensor,  # (B,)
+-    gamma: float,
++    gamma: float | torch.Tensor,
+     num_bins: int,
+     min_v: float,
+     max_v: float,
+@@ -45,6 +45,8 @@ def _compute_categorical_td_target(
+     reward = reward.reshape(-1, 1)
+     done = done.reshape(-1, 1)
+     actor_entropy = actor_entropy.reshape(-1, 1)
++    if isinstance(gamma, torch.Tensor):
++        gamma = gamma.reshape(-1, 1)
+ 
+     # Compute target value buckets
+     bin_width = (max_v - min_v) / (num_bins - 1)
+@@ -87,6 +89,7 @@ def update_actor(
+     device: torch.device,
+     use_amp: bool,
+     grad_scaler: Optional[GradScaler],
++    actor_q_bonus: Optional[Callable] = None,
+ ) -> dict[str, torch.Tensor]:
+     """Update actor network.
+ 
+@@ -122,6 +125,9 @@ def update_actor(
+         q = torch.minimum(qs[0], qs[1])
+         critic.network.requires_grad_(True)
+ 
++        if actor_q_bonus is not None:
++            q = q + actor_q_bonus(q, batch["observation"], actions)
++
+         temp_value = temperature().detach()
+         actor_loss = (log_probs * temp_value - q).mean()
+ 
+@@ -231,7 +237,7 @@ def update_critic(
+                 reward=batch["reward"],  # type: ignore
+                 done=batch["terminated"],  # type: ignore
+                 actor_entropy=next_actor_entropy,
+-                gamma=gamma**n_step,
++                gamma=batch.get("discount", gamma**n_step),
+                 num_bins=num_bins,
+                 min_v=min_v,
+                 max_v=max_v,
+diff --git a/flash_rl/buffers/torch_buffer.py b/flash_rl/buffers/torch_buffer.py
+index f6e3943..5b97da6 100644
+--- a/flash_rl/buffers/torch_buffer.py
++++ b/flash_rl/buffers/torch_buffer.py
+@@ -89,6 +89,7 @@ class TorchUniformBuffer(BaseBuffer):
+         self._rewards = torch.empty((m,), dtype=torch.float32, device=self._device, pin_memory=pin)
+         self._terminateds = torch.empty((m,), dtype=torch.float32, device=self._device, pin_memory=pin)
+         self._truncateds = torch.empty((m,), dtype=torch.float32, device=self._device, pin_memory=pin)
++        self._discounts = torch.empty((m,), dtype=torch.float32, device=self._device, pin_memory=pin)
+ 
+         self._n_step_transitions: deque[dict[str, Any]] = deque(maxlen=self._n_step)
+         self._num_in_buffer = 0
+@@ -113,6 +114,7 @@ class TorchUniformBuffer(BaseBuffer):
+         n_step_terminated = curr_transition["terminated"].clone()
+         n_step_truncated = curr_transition["truncated"].clone()
+         n_step_next_observation = curr_transition["next_observation"].clone()
++        n_step_discount = torch.full_like(n_step_reward, self._gamma)
+ 
+         for n_step_idx in reversed(range(self._n_step - 1)):
+             transition = self._n_step_transitions[n_step_idx]
+@@ -124,6 +126,7 @@ class TorchUniformBuffer(BaseBuffer):
+             # compute n-step return
+             done = (terminated.bool() | truncated.bool()).float()
+             n_step_reward = reward + self._gamma * n_step_reward * (1 - done)
++            n_step_discount = self._gamma * (done + (1 - done) * n_step_discount)
+ 
+             # assign next observation starting from done
+             done_mask = done.bool()
+@@ -135,6 +138,7 @@ class TorchUniformBuffer(BaseBuffer):
+         n_step_prev_transition["terminated"] = n_step_terminated
+         n_step_prev_transition["truncated"] = n_step_truncated
+         n_step_prev_transition["next_observation"] = n_step_next_observation
++        n_step_prev_transition["discount"] = n_step_discount
+ 
+         return cast(Batch, n_step_prev_transition)
+ 
+@@ -159,6 +163,7 @@ class TorchUniformBuffer(BaseBuffer):
+             self._rewards[idxs] = n_step_prev_transition["reward"].to(self._rewards.dtype)
+             self._terminateds[idxs] = n_step_prev_transition["terminated"].to(self._terminateds.dtype)
+             self._truncateds[idxs] = n_step_prev_transition["truncated"].to(self._truncateds.dtype)
++            self._discounts[idxs] = n_step_prev_transition["discount"]
+ 
+             self._num_in_buffer = min(self._num_in_buffer + add_batch_size, self._max_length)
+             self._current_idx = (self._current_idx + add_batch_size) % self._max_length
+@@ -179,6 +184,7 @@ class TorchUniformBuffer(BaseBuffer):
+         batch["terminated"] = self._terminateds[idxs]
+         batch["truncated"] = self._truncateds[idxs]
+         batch["next_observation"] = self._next_observations[idxs]
++        batch["discount"] = self._discounts[idxs]
+ 
+         return batch
+ 
+@@ -199,6 +205,7 @@ class TorchUniformBuffer(BaseBuffer):
+             "next_observation": self._next_observations[:n],
+             "num_in_buffer": self._num_in_buffer,
+             "current_idx": self._current_idx,
++            "discount": self._discounts[:n],
+         }
+         torch.save(dataset, path)
+ 
+@@ -210,6 +217,8 @@ class TorchUniformBuffer(BaseBuffer):
+         """
+         dataset = torch.load(path, map_location=self._device)
+         n = dataset["num_in_buffer"]
++        if not 0 <= n <= self._max_length:
++            raise ValueError("Saved replay does not fit the configured buffer capacity")
+ 
+         self._observations[:n] = dataset["observation"]
+         self._next_observations[:n] = dataset["next_observation"]
+@@ -217,9 +226,12 @@ class TorchUniformBuffer(BaseBuffer):
+         self._rewards[:n] = dataset["reward"]
+         self._terminateds[:n] = dataset["terminated"]
+         self._truncateds[:n] = dataset["truncated"]
++        self._discounts[:n] = dataset.get("discount", self._gamma**self._n_step)
+ 
+         self._num_in_buffer = n
+-        self._current_idx = dataset["current_idx"]
++        # When growing a full ring, append after the restored valid prefix.
++        # Keeping the old cursor would count unwritten entries as valid samples.
++        self._current_idx = n if n < self._max_length else dataset["current_idx"] % self._max_length
+         # Note: _n_step_transitions is intentionally not saved/loaded.
+         # At most (n_step - 1) in-flight transitions are lost, which is negligible.
+         self._n_step_transitions.clear()
+diff --git a/flash_rl/types.py b/flash_rl/types.py
+index 4ce8bdf..b858f30 100644
+--- a/flash_rl/types.py
++++ b/flash_rl/types.py
+@@ -1,10 +1,14 @@
+ from typing import Any, Union
+ 
+-import jax.numpy as jnp
+ import numpy as np
+ import numpy.typing as npt
+ import torch
+ 
+ NDArray = npt.NDArray[Any]
+ F32NDArray = npt.NDArray[np.float32]
+-Tensor = Union[NDArray, jnp.ndarray, torch.Tensor]
++try:
++    import jax.numpy as jnp
++except ImportError:
++    Tensor = Union[NDArray, torch.Tensor]
++else:
++    Tensor = Union[NDArray, jnp.ndarray, torch.Tensor]

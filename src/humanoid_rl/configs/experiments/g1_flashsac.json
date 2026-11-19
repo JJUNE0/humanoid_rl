@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "name": "g1_flashsac",
+  "method": "flashsac",
+  "task": "G1-Carry-Box",
+  "robot": "g1",
+  "description": "Existing native G1 carry task with FlashSAC",
+  "config": {},
+  "inputs": []
+}

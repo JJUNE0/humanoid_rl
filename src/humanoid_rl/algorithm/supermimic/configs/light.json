@@ -1,0 +1,21 @@
+{
+  "training": {
+    "device": "cuda:0", "seed": 42, "num_envs": 128, "total_env_steps": 1000000,
+    "warmup_steps": 32, "updates_per_step": 1, "save_every": 25600,
+    "log_every": 25, "compile": true, "buffer_size": 512
+  },
+  "motion": {
+    "root": "${data_root}", "manifest": "${data_root}/outputs/humanoid_light_bfm/manifest.json",
+    "cache_dir": "${cache_root}/supermimic/humanoid_light", "split": "train",
+    "limit": null, "max_frames": null, "chunk_frames": 501
+  },
+  "environment": {"physics_dt": 0.0025, "decimation": 8, "episode_length_s": 10.0,
+                  "solver_iterations": 100, "line_search_iterations": 50},
+  "runner": {
+    "representation": "gencoord", "actor_obs": "rep_state", "history_length": 1,
+    "sampling_mode": "uniform", "dynamics_hidden_dims": [512, 512, 512],
+    "actor_hidden_dims": [512, 256, 128], "critic_hidden_dims": [256, 128],
+    "wm": {"num_batches": 2, "batch_size": 128, "horizon": 8},
+    "policy": {"num_batches": 1, "batch_size": 128, "horizon": 32}
+  }
+}

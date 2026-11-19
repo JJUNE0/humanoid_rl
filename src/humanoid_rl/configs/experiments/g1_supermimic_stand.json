@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "name": "g1_supermimic_stand",
+  "method": "supermimic",
+  "task": "G1-Stand",
+  "robot": "g1",
+  "description": "Preserved G1 WM+BPTT standing experiment; uses the existing carry data and WM warm start",
+  "config": {
+    "training": {
+      "seed": 20261026,
+      "total_transitions": 1000000,
+      "num_envs": 64,
+      "collect_steps": 128,
+      "seconds": 10,
+      "replay_capacity": 131072,
+      "gamma": 0.99,
+      "action_noise": 0.05,
+      "horizon": 32,
+      "window": 8,
+      "wm_updates": 32,
+      "wm_batch_size": 128,
+      "actor_updates": 4,
+      "actor_batch_size": 64,
+      "checkpoint_every": 25,
+      "eval_every": 25,
+      "eval_envs": 16,
+      "eval_episodes": 32,
+      "world_model_checkpoint": "${data_root}/src/super_mimic/artifacts/diagnostics/standing_start_20261026_v1/selected_world_model.pt",
+      "base_cache": "${data_root}/src/super_mimic/artifacts/cache/carry_wm_replay_v1",
+      "sidecar": "${data_root}/src/super_mimic/artifacts/cache/carry_offline_v1",
+      "normalization": "${cache_root}/supermimic/standing_normalization.pt"
+    }
+  },
+  "inputs": []
+}

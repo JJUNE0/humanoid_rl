@@ -1,19 +1,41 @@
 [project]
 name = "humanoid-rl"
 version = "0.1.0"
-description = "Add your description here"
+description = "Humanoid control with mjlab, motion data tools and shared robot definitions"
 readme = "README.md"
 authors = [
     { name = "JJUNE0", email = "bjy6614@naver.com" }
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "mjlab>=1.6.0",
+    "mjlab==1.6.0",
+    "gymnasium>=1.1,<2",
+    "omegaconf>=2.3,<3",
+]
+
+[project.optional-dependencies]
+bfm-zero = [
+    "pydantic>=2.11,<3",
+    "safetensors>=0.5,<1",
+    "tensordict>=0.8,<1",
+    "h5py>=3.13,<4",
 ]
 
 [project.scripts]
+humanoid = "humanoid_rl.cli:main"
 humanoid-rl = "humanoid_rl:main"
+humanoid-train = "humanoid_rl.train:main"
+humanoid-play = "humanoid_rl.play:main"
 
 [build-system]
 requires = ["uv_build>=0.11.3,<0.12.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = ["humanoid_rl", "humanoid_retarget", "robots"]
+source-exclude = [
+    "src/humanoid_retarget/datasets/**/*.bvh",
+    "src/humanoid_retarget/datasets/**/*.npz",
+    "src/humanoid_retarget/datasets/**/*.pkl",
+    "src/humanoid_retarget/datasets/**/.downloads/**",
+]

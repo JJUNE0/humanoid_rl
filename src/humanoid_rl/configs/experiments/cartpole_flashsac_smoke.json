@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "cartpole_flashsac_smoke",
+  "method": "flashsac",
+  "task": "Mjlab-Cartpole-Balance",
+  "robot": "cartpole",
+  "description": "Small FlashSAC execution check, no motion data required",
+  "config": {"training": {
+    "num_envs": 4, "total_env_steps": 32, "buffer_size": 256, "min_buffer": 16,
+    "batch_size": 16, "updates_per_step": 1, "n_step": 1,
+    "save_every": 32, "log_every": 1, "mixed_precision": false, "compile": false
+  }},
+  "inputs": []
+}

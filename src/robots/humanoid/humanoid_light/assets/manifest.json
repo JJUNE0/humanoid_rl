@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-28T10:08:10.564352+09:00",
+  "route": "USD -> NVIDIA SRL URDF exporter -> corrected URDF -> MuJoCo MJCF",
+  "source": "/home/cocel/Desktop/Research/humanoid/cocelo-rl-isaaclab/lab/cocelo/assets/data/Robots/Flamingo/humanoid_light_rev_1_0_12_45/assets (2)/humanoid_light_rev_1_0_12_45_merge_joints.usd",
+  "source_unchanged": true,
+  "files": {
+    "urdf": "humanoid_light.urdf",
+    "mjcf_robot": "humanoid_light.xml",
+    "mjcf_scene": "scene.xml",
+    "visual_preview": "preview.png",
+    "collision_preview": "collision_preview.png",
+    "validation": "validation.json",
+    "controller_settings": "control.json",
+    "raw_export_for_audit_only": "humanoid_light_exported.urdf"
+  },
+  "sha256": {
+    "humanoid_light.urdf": "e39d97fdf1844d77c8dedddb31c785021112df0bf53c8c92313edcd1def9899e",
+    "humanoid_light.xml": "7693d50fde9411f2321e3760f843537b620f31911a87dfd8dc1749f6100ed474",
+    "scene.xml": "01924f5218d31339359fb4b5a737439277cacc9f4752a9747eed75cb2caa60cc",
+    "preview.png": "be2c6849716a1b97fa89e0b102735eb7728b5cfb9c5c4479be9dd3fb90430635",
+    "collision_preview.png": "d08f99b53ceece4ab48ea36852308de68b9e4a8d5fbc49d3076d631174e68d2b",
+    "validation.json": "c49331a55cd667c789841025823b4f020228b2144de43a2b84034024ff6b13f9",
+    "control.json": "13ab7cabefc5506362aad0066d3632c9bf02cc8cc41d05ca4051e32b610cd250",
+    "humanoid_light_exported.urdf": "f3a0a00b79f0b98db863aa687d4454acb6611902eeb1b65dddd0d73c51b6314a"
+  },
+  "self_contained_mesh_paths": true,
+  "source_body_count": 31,
+  "actuated_joint_count": 26,
+  "total_mass_kg": 36.13955370336771,
+  "controller_note": "Independent torque actuators; delayed and coupled PD controller has not been ported.",
+  "visual_style": "capsule",
+  "simplified_at": "2026-10-28T12:25:17.748374+09:00",
+  "retained_visual_meshes": 0,
+  "collision_meshes": 29,
+  "capsule_count": 29,
+  "high_resolution_visuals": "Regenerate from the preserved USD with scripts/convert_humanoid_light.py."
+}

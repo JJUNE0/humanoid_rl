@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "local",
+  "device": "cuda:0",
+  "data_root": "${repo}",
+  "cache_root": "${repo}/data/cache",
+  "run_root": "${repo}/runs",
+  "persistent_root": null,
+  "overrides": {},
+  "env": {"MUJOCO_GL": "egl", "OMP_NUM_THREADS": "2"},
+  "sync_interval_seconds": 60
+}

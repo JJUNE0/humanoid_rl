@@ -1,0 +1,6 @@
+{
+  "version": 1, "name": "light_supermimic", "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking", "robot": "humanoid_light",
+  "description": "Screened CMU/LAFAN reference tracking with official SuperMimic learners and Light coupled PD",
+  "config": {}, "inputs": []
+}

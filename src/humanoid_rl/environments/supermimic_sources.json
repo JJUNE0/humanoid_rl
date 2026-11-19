@@ -1,0 +1,4 @@
+{
+  "third_party/supermimic": {"url": "https://github.com/HybridRobotics/supermimic.git", "revision": "7e94b073940b7a19b9a82ff01e191cfb35c4ba91"},
+  "third_party/mjlab_research": {"url": "https://github.com/HybridRobotics/mjlab_research.git", "revision": "ae1b04a6988f02b5fe8fedae048a6ae45055f986"}
+}

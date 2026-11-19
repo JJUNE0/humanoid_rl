@@ -1,0 +1,6 @@
+{
+  "python": "3.10",
+  "mjlab": "1.4.0",
+  "venv": ".venv_super_mimic",
+  "description": "Preserved G1 trainer; src/super_mimic/requirements-lock.txt"
+}

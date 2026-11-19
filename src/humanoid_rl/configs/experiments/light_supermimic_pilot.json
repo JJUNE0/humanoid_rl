@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "light_supermimic_pilot",
+  "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking",
+  "robot": "humanoid_light",
+  "description": "Full screened CMU/LAFAN motions; 51,200-transition pilot with regular checkpoints",
+  "config": {
+    "training": {
+      "total_env_steps": 51200,
+      "save_every": 6400,
+      "log_every": 25
+    }
+  },
+  "inputs": []
+}

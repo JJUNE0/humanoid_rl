@@ -1,0 +1,210 @@
+{
+  "robot": "Unitree H1 (19 actuated joints)",
+  "repository": "robfiras/loco-mujoco-models",
+  "revision": "1aeea8b21cb160ff9f24d9ee8198661c9591f245",
+  "local_changes": [
+    "h1.xml include paths ../common/ -> common/; model dynamics unchanged"
+  ],
+  "files": [
+    {
+      "path": "common/default_hfield_80.png",
+      "bytes": 487,
+      "sha256": "6b10bf178692209d0f4882bbc69e409a647c25664631018f9a57e5cf86fb7d73",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/common/default_hfield_80.png",
+      "source_git_blob": "454717a4652046a6e27ff18c7ebf1192c3edae2c",
+      "source_sha256": "6b10bf178692209d0f4882bbc69e409a647c25664631018f9a57e5cf86fb7d73"
+    },
+    {
+      "path": "common/mimic_sites.xml",
+      "bytes": 195,
+      "sha256": "3ee4c09a359bb23abd2668d3024fe31d4abc263623f906b6a77ac2bf1b7d01dc",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/common/mimic_sites.xml",
+      "source_git_blob": "0228eefe9bc5ebb64b31cf69d7f461371771277e",
+      "source_sha256": "3ee4c09a359bb23abd2668d3024fe31d4abc263623f906b6a77ac2bf1b7d01dc"
+    },
+    {
+      "path": "common/scene.xml",
+      "bytes": 964,
+      "sha256": "4f2873e5a7c6a17917c0d8e2244b1c6d80fb3b33f2b289bd9e51979fbd3ed434",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/common/scene.xml",
+      "source_git_blob": "a279b8d689ffb3bc5d45c62356c45b0a1de14750",
+      "source_sha256": "4f2873e5a7c6a17917c0d8e2244b1c6d80fb3b33f2b289bd9e51979fbd3ed434"
+    },
+    {
+      "path": "assets/left_ankle_link.stl",
+      "bytes": 216684,
+      "sha256": "f623223b59d0f8cd86a799f409f4e8680da3e48d9b60e9f4bf9dad5c5dc8ac25",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_ankle_link.stl",
+      "source_git_blob": "2fb6869140aa6bf40538a0871a9d45784fa3ff49",
+      "source_sha256": "f623223b59d0f8cd86a799f409f4e8680da3e48d9b60e9f4bf9dad5c5dc8ac25"
+    },
+    {
+      "path": "assets/left_elbow_link.stl",
+      "bytes": 258684,
+      "sha256": "5ccf9bc83a751c1965b692e75534e57ee3c8a0916cbcff2ccccd8fe2b9d818d7",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_elbow_link.stl",
+      "source_git_blob": "5f798ca0768656ef8846059414370d51bf5d77c3",
+      "source_sha256": "5ccf9bc83a751c1965b692e75534e57ee3c8a0916cbcff2ccccd8fe2b9d818d7"
+    },
+    {
+      "path": "assets/left_hip_pitch_link.stl",
+      "bytes": 452384,
+      "sha256": "aa790c31ffc100cd182f2bf4480e7bfda675edc58ed8f361b6553a4975c9de3b",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_hip_pitch_link.stl",
+      "source_git_blob": "e5898ab498d663eeaf261daae7b9beb9ac37d843",
+      "source_sha256": "aa790c31ffc100cd182f2bf4480e7bfda675edc58ed8f361b6553a4975c9de3b"
+    },
+    {
+      "path": "assets/left_hip_roll_link.stl",
+      "bytes": 769284,
+      "sha256": "8ed880cf1171e048cfe50489fe2546c32790ac0c24a2b3b4c560495401013552",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_hip_roll_link.stl",
+      "source_git_blob": "5ade02bc0c560abaddfbf952589ec59891fa346e",
+      "source_sha256": "8ed880cf1171e048cfe50489fe2546c32790ac0c24a2b3b4c560495401013552"
+    },
+    {
+      "path": "assets/left_hip_yaw_link.stl",
+      "bytes": 885884,
+      "sha256": "103a854e684b84e1baba7d073822079069c64d0fa7b1592f29d38bd29f545bfb",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_hip_yaw_link.stl",
+      "source_git_blob": "3bcc4b8730b10e12c9be3d8b2b9b3409980221c5",
+      "source_sha256": "103a854e684b84e1baba7d073822079069c64d0fa7b1592f29d38bd29f545bfb"
+    },
+    {
+      "path": "assets/left_knee_link.stl",
+      "bytes": 660384,
+      "sha256": "efda8a6c54406c788102c0d6e59ea95e24114607bc2da9a2bf7f287ef7e48109",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_knee_link.stl",
+      "source_git_blob": "18174eed93d892134384a75b2bd69a724df35974",
+      "source_sha256": "efda8a6c54406c788102c0d6e59ea95e24114607bc2da9a2bf7f287ef7e48109"
+    },
+    {
+      "path": "assets/left_shoulder_pitch_link.stl",
+      "bytes": 787484,
+      "sha256": "42e1db49464ca0f44f933114ee426e7f6d6310d20cf104bfa38b5ed4794cfab7",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_shoulder_pitch_link.stl",
+      "source_git_blob": "be81370b2252d2e6b1799828d7c45db91442b867",
+      "source_sha256": "42e1db49464ca0f44f933114ee426e7f6d6310d20cf104bfa38b5ed4794cfab7"
+    },
+    {
+      "path": "assets/left_shoulder_roll_link.stl",
+      "bytes": 903384,
+      "sha256": "8d3bcf767d72a9a5d7dae539eae79dc4132f0159b8803a6f6f2f9ad4b7e94d19",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_shoulder_roll_link.stl",
+      "source_git_blob": "a59bb640fdbd932c6eba299ef5d3ed63994ea524",
+      "source_sha256": "8d3bcf767d72a9a5d7dae539eae79dc4132f0159b8803a6f6f2f9ad4b7e94d19"
+    },
+    {
+      "path": "assets/left_shoulder_yaw_link.stl",
+      "bytes": 644184,
+      "sha256": "e22a5b53f8f307e6c5d6c17f9ceae4852c6468547a951cb39dfdec9ee414b515",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/left_shoulder_yaw_link.stl",
+      "source_git_blob": "01d3c75b2246df403f5d4a81b034067b58952107",
+      "source_sha256": "e22a5b53f8f307e6c5d6c17f9ceae4852c6468547a951cb39dfdec9ee414b515"
+    },
+    {
+      "path": "assets/logo_link.stl",
+      "bytes": 145484,
+      "sha256": "ef9635c847ca7cd61aeaed86ad599935b648fb6f8688867c0448917b1811511b",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/logo_link.stl",
+      "source_git_blob": "c396d51d80a93035ed399e4762de83ba2c2d0874",
+      "source_sha256": "ef9635c847ca7cd61aeaed86ad599935b648fb6f8688867c0448917b1811511b"
+    },
+    {
+      "path": "assets/pelvis.stl",
+      "bytes": 672884,
+      "sha256": "dc2cbbeb07d3b63bce9fedeb8cf5252609dca1e89380734d22d5b3c8ded2f15c",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/pelvis.stl",
+      "source_git_blob": "05e5512c79bbee0a324d401b1bfd40441b660c94",
+      "source_sha256": "dc2cbbeb07d3b63bce9fedeb8cf5252609dca1e89380734d22d5b3c8ded2f15c"
+    },
+    {
+      "path": "assets/right_ankle_link.stl",
+      "bytes": 216284,
+      "sha256": "a72e7b10d3961b5c5bb7b0ca09f20cbc203619f5ded33ca030517c06298d2fd9",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_ankle_link.stl",
+      "source_git_blob": "5c85b2b0731d72ccf17a376e0247c3746aa34c93",
+      "source_sha256": "a72e7b10d3961b5c5bb7b0ca09f20cbc203619f5ded33ca030517c06298d2fd9"
+    },
+    {
+      "path": "assets/right_elbow_link.stl",
+      "bytes": 258584,
+      "sha256": "bc1b2aa33cffda279b3e6a40b5b932b86de9cce6c41f0c0d860b442e81edcdc2",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_elbow_link.stl",
+      "source_git_blob": "f4c03e3af8c6c3f985946026b6815ebca4adcc06",
+      "source_sha256": "bc1b2aa33cffda279b3e6a40b5b932b86de9cce6c41f0c0d860b442e81edcdc2"
+    },
+    {
+      "path": "assets/right_hip_pitch_link.stl",
+      "bytes": 452384,
+      "sha256": "3c0300dd96432f218857886007e9d4e8be038cd8b85e04e84a59df4de7f90476",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_hip_pitch_link.stl",
+      "source_git_blob": "1d4e515c1479609d2fb7c17fd2069a6d2487dd6d",
+      "source_sha256": "3c0300dd96432f218857886007e9d4e8be038cd8b85e04e84a59df4de7f90476"
+    },
+    {
+      "path": "assets/right_hip_roll_link.stl",
+      "bytes": 768484,
+      "sha256": "3e95b01b0a215e1d134545d4073cf7a72ab38ca33e35c606c03f1706d63588c6",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_hip_roll_link.stl",
+      "source_git_blob": "d2a0af9bb69888d159134451dd1c3fc5075689c8",
+      "source_sha256": "3e95b01b0a215e1d134545d4073cf7a72ab38ca33e35c606c03f1706d63588c6"
+    },
+    {
+      "path": "assets/right_hip_yaw_link.stl",
+      "bytes": 884484,
+      "sha256": "10badbb0ac78e22fc220f421b1c919cfcf59406b412d78313e4b8b06cbc51e47",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_hip_yaw_link.stl",
+      "source_git_blob": "6c8ffd59e6b80a710b7770248e357788b04059f9",
+      "source_sha256": "10badbb0ac78e22fc220f421b1c919cfcf59406b412d78313e4b8b06cbc51e47"
+    },
+    {
+      "path": "assets/right_knee_link.stl",
+      "bytes": 662184,
+      "sha256": "6183abbaef2afc775c220853e403b8479022a99954dbeef829b39d71916ddeda",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_knee_link.stl",
+      "source_git_blob": "1ed90cc62457afbdb17915c47efe5f9cafcfae0b",
+      "source_sha256": "6183abbaef2afc775c220853e403b8479022a99954dbeef829b39d71916ddeda"
+    },
+    {
+      "path": "assets/right_shoulder_pitch_link.stl",
+      "bytes": 788484,
+      "sha256": "850ffa7321993bfadcdb8bab1d422239f6a20abe27daa5ef99622f55d4da3217",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_shoulder_pitch_link.stl",
+      "source_git_blob": "f77ab2b8b8a67d83c8960df0a75479f5b8471fa9",
+      "source_sha256": "850ffa7321993bfadcdb8bab1d422239f6a20abe27daa5ef99622f55d4da3217"
+    },
+    {
+      "path": "assets/right_shoulder_roll_link.stl",
+      "bytes": 908284,
+      "sha256": "b9e793e351e09027d27427c06df2c1cb6b37c0205d0f68686b0d73916c6821de",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_shoulder_roll_link.stl",
+      "source_git_blob": "a98398f9edcef9fd01ed91c3304e7610e5ab08e7",
+      "source_sha256": "b9e793e351e09027d27427c06df2c1cb6b37c0205d0f68686b0d73916c6821de"
+    },
+    {
+      "path": "assets/right_shoulder_yaw_link.stl",
+      "bytes": 646884,
+      "sha256": "0c9e4bec895f24c07fb2c4d132fc5e3cc7146155547267e9c270789af6567781",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/right_shoulder_yaw_link.stl",
+      "source_git_blob": "7943bab36d5f85416942ea4e682ca6453612b4b7",
+      "source_sha256": "0c9e4bec895f24c07fb2c4d132fc5e3cc7146155547267e9c270789af6567781"
+    },
+    {
+      "path": "assets/torso_link.stl",
+      "bytes": 2339384,
+      "sha256": "3ab785cbfbd851b0e9c59a46871aabc4718f3f8e726e21a2d14360d217ec7ba8",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/assets/torso_link.stl",
+      "source_git_blob": "335b2f19100e5cdc9b751cb3a83c3d9f49e4a227",
+      "source_sha256": "3ab785cbfbd851b0e9c59a46871aabc4718f3f8e726e21a2d14360d217ec7ba8"
+    },
+    {
+      "path": "h1.xml",
+      "bytes": 15530,
+      "sha256": "da71cd230080b4fc25523ee9b47ababd1bba5da9f275e5818361e9dde7d8a3a1",
+      "source_url": "https://raw.githubusercontent.com/robfiras/loco-mujoco-models/1aeea8b21cb160ff9f24d9ee8198661c9591f245/loco_mujoco_models/unitree_h1/h1.xml",
+      "source_git_blob": "04e533d55059715b13ddeebf3d7e22e36b9a3e3a",
+      "source_sha256": "753729151c408de3ea8525f8b365b9990d8027062c48e4edf53634f96ea66c7e"
+    }
+  ]
+}

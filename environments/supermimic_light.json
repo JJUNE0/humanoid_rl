@@ -1,0 +1,7 @@
+{
+  "python": "3.13",
+  "mjlab": "1.6.0",
+  "mujoco_distribution": "mujoco-core",
+  "venv": ".venv_supermimic_light",
+  "description": "Official SuperMimic core and mjlab research fork on the verified local Torch baseline; environments/light_supermimic/uv.lock"
+}

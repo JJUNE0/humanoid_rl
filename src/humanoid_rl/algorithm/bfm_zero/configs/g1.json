@@ -1,0 +1,15 @@
+{
+  "training": {
+    "total_env_steps": 384000000,
+    "log_every": 10,
+    "keep_checkpoints": 3
+  },
+  "motion": {
+    "root": "src/humanoid_retarget/datasets/lafan1/retargeted/g1/bfm_zero_50hz",
+    "validation_subject": null
+  },
+  "environment": {
+    "observation_noise": true,
+    "domain_randomization": true
+  }
+}

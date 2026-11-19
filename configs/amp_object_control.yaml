@@ -1,0 +1,29 @@
+# Robot + box interaction AMP, separate control critic, no stage conditioning/FB/task reward.
+# Ordinary resets use carry_box.yaml ranges; 50% coherent RSI restores an expert scene.
+data_root: /home/cocel/Desktop/Research/humanoid/I-BFM-Code/ibfm/tasks/carry_box/rollouts/carry_20_40_success500_v1
+observe_object: true
+hidden_dims: [512, 256]
+learning_rate: 0.00001
+batch_size: 512
+gradient_penalty: 10.0
+weight_decay: 0.0001
+reward_scale: 1.0
+min_feature_std: 0.1
+phase_balanced: true
+reference_init_probability: 0.5
+validation_every: 100
+cache_dir: outputs/amp_cache
+max_motions: null
+terminate_on_fall: false
+terminate_on_success: true
+action_scale_multiplier: 5.0
+control:
+  action_rate: -0.1
+  feet_orientation: -0.4
+  ankle_roll: -4.0
+  joint_position_limit: -10.0
+  slippage: -4.0
+  undesired_contact: -1.0
+  action_rate_scale: 5.0
+  actor_weight: 0.02
+  ema_decay: 0.99

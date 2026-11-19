@@ -1,0 +1,33 @@
+{
+  "training": {
+    "reward_mode": "add",
+    "n_step": 1
+  },
+  "imitation": {
+    "data_root": "",
+    "hidden_dims": [
+      512,
+      256
+    ],
+    "learning_rate": 0.0001,
+    "batch_size": 512,
+    "gradient_penalty": 10.0,
+    "weight_decay": 0.0001,
+    "reward_scale": 1.0,
+    "min_feature_std": 0.1,
+    "phase_balanced": true,
+    "reference_init_probability": 0.0,
+    "validation_every": 100,
+    "cache_dir": "outputs/amp_cache",
+    "max_motions": null,
+    "single_motion": null,
+    "fixed_initial_state": true,
+    "observe_object": true,
+    "terminate_on_fall": true,
+    "terminate_on_success": false,
+    "action_scale_multiplier": 1.0,
+    "controller_profile": "native",
+    "control": null,
+    "logit_regularization": 0.05
+  }
+}

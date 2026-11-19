@@ -1,0 +1,13 @@
+# All dimensions are metres, masses kg and angles radians. Ranges are uniform
+# and independently sampled for each environment on every episode reset.
+box_size: [0.2, 0.4]         # full size, independently sampled along XYZ
+box_mass: [0.5, 0.9]
+box_yaw: [-0.1, 0.1]
+box_xy_offset: 0.025
+support_width: [0.5, 0.6]    # full size, independently sampled along XY
+support_top_height: [0.1, 0.55]
+source_x: [0.8, 1.2]
+source_y: [-0.25, 0.25]
+target_dx: [0.9, 1.6]       # relative to source support
+target_dy: [-0.6, 0.6]
+robot_yaw: [-0.15, 0.15]

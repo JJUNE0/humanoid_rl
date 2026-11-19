@@ -1,0 +1,30 @@
+{
+  "source": "Unitree unitree_rl_gym H1 PD gains and neutral pose; joint names mapped to the copied LocoMuJoCo MJCF",
+  "source_url": "https://github.com/unitreerobotics/unitree_rl_gym/blob/main/legged_gym/envs/h1/h1_config.py",
+  "action_mapping": "BFM-Zero: default + 0.25 * clip(raw * 5, -5, 5) * effort_limit / stiffness; clip PD torque, not position targets",
+  "action_scale": 0.25,
+  "normalize_action_to": 5.0,
+  "action_rescale": true,
+  "clip_position_targets": false,
+  "stiffness": {
+    "hip_rotation_l": 150, "hip_adduction_l": 150, "hip_flexion_l": 150, "knee_angle_l": 200, "ankle_angle_l": 40,
+    "hip_rotation_r": 150, "hip_adduction_r": 150, "hip_flexion_r": 150, "knee_angle_r": 200, "ankle_angle_r": 40,
+    "back_bkz": 300,
+    "l_arm_shy": 150, "l_arm_shx": 150, "l_arm_shz": 150, "left_elbow": 100,
+    "r_arm_shy": 150, "r_arm_shx": 150, "r_arm_shz": 150, "right_elbow": 100
+  },
+  "damping": {
+    "hip_rotation_l": 2, "hip_adduction_l": 2, "hip_flexion_l": 2, "knee_angle_l": 4, "ankle_angle_l": 2,
+    "hip_rotation_r": 2, "hip_adduction_r": 2, "hip_flexion_r": 2, "knee_angle_r": 4, "ankle_angle_r": 2,
+    "back_bkz": 6,
+    "l_arm_shy": 2, "l_arm_shx": 2, "l_arm_shz": 2, "left_elbow": 2,
+    "r_arm_shy": 2, "r_arm_shx": 2, "r_arm_shz": 2, "right_elbow": 2
+  },
+  "default_joint_pos": {
+    "hip_rotation_l": 0, "hip_adduction_l": 0, "hip_flexion_l": -0.1, "knee_angle_l": 0.3, "ankle_angle_l": -0.2,
+    "hip_rotation_r": 0, "hip_adduction_r": 0, "hip_flexion_r": -0.1, "knee_angle_r": 0.3, "ankle_angle_r": -0.2,
+    "back_bkz": 0,
+    "l_arm_shy": 0, "l_arm_shx": 0, "l_arm_shz": 0, "left_elbow": 0,
+    "r_arm_shy": 0, "r_arm_shx": 0, "r_arm_shz": 0, "right_elbow": 0
+  }
+}

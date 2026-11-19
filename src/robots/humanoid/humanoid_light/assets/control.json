@@ -1,0 +1,425 @@
+{
+  "source": "/home/cocel/Desktop/Research/humanoid/cocelo-rl-isaaclab/lab/cocelo/assets/flamingo/humanoid_light_v1.py",
+  "source_sha256": "311ce9d13bae58a655b84887bc9817391d0fa5580873985028bd220eeb49a0b7",
+  "groups": {
+    "heads": {
+      "joint_names_expr": [
+        "head_joint"
+      ],
+      "effort_limit": {
+        "head_joint": 5.5
+      },
+      "velocity_limit": {
+        "head_joint": 20.0
+      },
+      "stiffness": {
+        "head_joint": 20.0
+      },
+      "damping": {
+        "head_joint": 0.25
+      },
+      "armature": {
+        "head_joint": 0.01
+      },
+      "actuator_class": "DelayedPDActuatorCfg"
+    },
+    "legs": {
+      "joint_names_expr": [
+        "left_hip_.*_joint",
+        "right_hip_.*_joint",
+        ".*_knee_joint"
+      ],
+      "effort_limit": {
+        "left_hip_pitch_joint": 120.0,
+        "left_hip_roll_joint": 60.0,
+        "left_hip_yaw_joint": 60.0,
+        "left_knee_joint": 120.0,
+        "right_hip_pitch_joint": 120.0,
+        "right_hip_roll_joint": 60.0,
+        "right_hip_yaw_joint": 60.0,
+        "right_knee_joint": 120.0
+      },
+      "velocity_limit": {
+        "left_hip_pitch_joint": 20.0,
+        "left_hip_roll_joint": 20.0,
+        "left_hip_yaw_joint": 20.0,
+        "left_knee_joint": 20.0,
+        "right_hip_pitch_joint": 20.0,
+        "right_hip_roll_joint": 20.0,
+        "right_hip_yaw_joint": 20.0,
+        "right_knee_joint": 20.0
+      },
+      "velocity_limit_sim": {
+        ".*_hip_.*_joint": 20.0,
+        ".*_knee_joint": 20.0
+      },
+      "stiffness": {
+        ".*_hip_pitch_joint": 100.0,
+        ".*_hip_roll_joint": 100.0,
+        ".*_hip_yaw_joint": 100.0,
+        ".*_knee_joint": 100.0
+      },
+      "damping": {
+        ".*_hip_pitch_joint": 1.0,
+        ".*_hip_roll_joint": 1.0,
+        ".*_hip_yaw_joint": 1.0,
+        ".*_knee_joint": 1.0
+      },
+      "armature": {
+        ".*_hip_.*_joint": 0.01,
+        ".*_knee_joint": 0.01
+      },
+      "actuator_class": "DelayedPDActuatorCfg"
+    },
+    "ankles": {
+      "joint_names_expr": [
+        "left_ankle_pitch_joint",
+        "left_ankle_roll_joint",
+        "right_ankle_pitch_joint",
+        "right_ankle_roll_joint"
+      ],
+      "gear_ratio_1": -2.0,
+      "gear_ratio_2": -2.0,
+      "gamma": 1.0,
+      "effort_limit": {
+        "left_ankle_pitch_joint": 28.0,
+        "left_ankle_roll_joint": 28.0,
+        "right_ankle_pitch_joint": 28.0,
+        "right_ankle_roll_joint": 28.0
+      },
+      "velocity_limit": {
+        "left_ankle_pitch_joint": 18.0,
+        "left_ankle_roll_joint": 18.0,
+        "right_ankle_pitch_joint": 18.0,
+        "right_ankle_roll_joint": 18.0
+      },
+      "stiffness": {
+        ".*_ankle_pitch_joint": 20.0,
+        ".*_ankle_roll_joint": 20.0
+      },
+      "damping": {
+        ".*_ankle_pitch_joint": 0.25,
+        ".*_ankle_roll_joint": 0.25
+      },
+      "armature": {
+        ".*_ankle_.*_joint": 0.01
+      },
+      "actuator_class": "CoupledDelayedPDActuatorCfg"
+    },
+    "body": {
+      "joint_names_expr": [
+        "torso_yaw_joint"
+      ],
+      "effort_limit": {
+        "torso_yaw_joint": 60.0
+      },
+      "velocity_limit": {
+        "torso_yaw_joint": 20.0
+      },
+      "stiffness": {
+        "torso_yaw_joint": 100.0
+      },
+      "damping": {
+        "torso_yaw_joint": 1.0
+      },
+      "armature": {
+        "torso_yaw_joint": 0.01
+      },
+      "actuator_class": "DelayedPDActuatorCfg"
+    },
+    "torso_pitch_roll": {
+      "joint_names_expr": [
+        "torso_pitch_joint",
+        "torso_roll_joint"
+      ],
+      "gear_ratio_1": 1.0,
+      "gear_ratio_2": 1.0,
+      "gamma": 1.0,
+      "effort_limit": {
+        "torso_pitch_joint": 36.0,
+        "torso_roll_joint": 36.0
+      },
+      "velocity_limit": {
+        "torso_pitch_joint": 53.0,
+        "torso_roll_joint": 53.0
+      },
+      "stiffness": {
+        "torso_pitch_joint": 100.0,
+        "torso_roll_joint": 100.0
+      },
+      "damping": {
+        "torso_pitch_joint": 1.0,
+        "torso_roll_joint": 1.0
+      },
+      "armature": {
+        "torso_pitch_joint": 0.01,
+        "torso_roll_joint": 0.01
+      },
+      "actuator_class": "CoupledDelayedPDActuatorCfg"
+    },
+    "arms": {
+      "joint_names_expr": [
+        ".*_shoulder_pitch_joint",
+        ".*_shoulder_roll_joint",
+        ".*_shoulder_yaw_joint",
+        ".*_elbow_joint",
+        ".*_wrist_joint"
+      ],
+      "effort_limit": {
+        "left_shoulder_pitch_joint": 60.0,
+        "left_shoulder_roll_joint": 60.0,
+        "left_shoulder_yaw_joint": 17.0,
+        "right_shoulder_pitch_joint": 60.0,
+        "right_shoulder_roll_joint": 60.0,
+        "right_shoulder_yaw_joint": 17.0,
+        "left_elbow_joint": 36.0,
+        "right_elbow_joint": 36.0,
+        "left_wrist_joint": 14.0,
+        "right_wrist_joint": 14.0
+      },
+      "velocity_limit": {
+        "left_shoulder_pitch_joint": 20.0,
+        "left_shoulder_roll_joint": 20.0,
+        "left_shoulder_yaw_joint": 40.0,
+        "right_shoulder_pitch_joint": 20.0,
+        "right_shoulder_roll_joint": 20.0,
+        "right_shoulder_yaw_joint": 40.0,
+        "left_elbow_joint": 53.0,
+        "right_elbow_joint": 53.0,
+        "left_wrist_joint": 36.0,
+        "right_wrist_joint": 36.0
+      },
+      "stiffness": {
+        ".*_shoulder_pitch_joint": 100.0,
+        ".*_shoulder_roll_joint": 100.0,
+        ".*_shoulder_yaw_joint": 25.0,
+        ".*_elbow_joint": 50.0,
+        ".*_wrist_joint": 50.0
+      },
+      "damping": {
+        ".*_shoulder_pitch_joint": 1.0,
+        ".*_shoulder_roll_joint": 1.0,
+        ".*_shoulder_yaw_joint": 1.0,
+        ".*_elbow_joint": 1.0,
+        ".*_wrist_joint": 1.0
+      },
+      "armature": {
+        ".*_shoulder_.*_joint": 0.01,
+        ".*_elbow_joint": 0.01,
+        ".*_wrist_joint": 0.01
+      },
+      "actuator_class": "DelayedPDActuatorCfg"
+    }
+  },
+  "joints": {
+    "head_joint": {
+      "group": "heads",
+      "effort_limit": 5.5,
+      "velocity_limit": 20.0,
+      "stiffness": 20.0,
+      "damping": 0.25,
+      "armature": 0.01
+    },
+    "left_hip_pitch_joint": {
+      "group": "legs",
+      "effort_limit": 120.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_hip_roll_joint": {
+      "group": "legs",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_hip_yaw_joint": {
+      "group": "legs",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_knee_joint": {
+      "group": "legs",
+      "effort_limit": 120.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_hip_pitch_joint": {
+      "group": "legs",
+      "effort_limit": 120.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_hip_roll_joint": {
+      "group": "legs",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_hip_yaw_joint": {
+      "group": "legs",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_knee_joint": {
+      "group": "legs",
+      "effort_limit": 120.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_ankle_pitch_joint": {
+      "group": "ankles",
+      "effort_limit": 28.0,
+      "velocity_limit": 18.0,
+      "stiffness": 20.0,
+      "damping": 0.25,
+      "armature": 0.01
+    },
+    "left_ankle_roll_joint": {
+      "group": "ankles",
+      "effort_limit": 28.0,
+      "velocity_limit": 18.0,
+      "stiffness": 20.0,
+      "damping": 0.25,
+      "armature": 0.01
+    },
+    "right_ankle_pitch_joint": {
+      "group": "ankles",
+      "effort_limit": 28.0,
+      "velocity_limit": 18.0,
+      "stiffness": 20.0,
+      "damping": 0.25,
+      "armature": 0.01
+    },
+    "right_ankle_roll_joint": {
+      "group": "ankles",
+      "effort_limit": 28.0,
+      "velocity_limit": 18.0,
+      "stiffness": 20.0,
+      "damping": 0.25,
+      "armature": 0.01
+    },
+    "torso_yaw_joint": {
+      "group": "body",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "torso_pitch_joint": {
+      "group": "torso_pitch_roll",
+      "effort_limit": 36.0,
+      "velocity_limit": 53.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "torso_roll_joint": {
+      "group": "torso_pitch_roll",
+      "effort_limit": 36.0,
+      "velocity_limit": 53.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_elbow_joint": {
+      "group": "arms",
+      "effort_limit": 36.0,
+      "velocity_limit": 53.0,
+      "stiffness": 50.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_shoulder_pitch_joint": {
+      "group": "arms",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_shoulder_roll_joint": {
+      "group": "arms",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_shoulder_yaw_joint": {
+      "group": "arms",
+      "effort_limit": 17.0,
+      "velocity_limit": 40.0,
+      "stiffness": 25.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "left_wrist_joint": {
+      "group": "arms",
+      "effort_limit": 14.0,
+      "velocity_limit": 36.0,
+      "stiffness": 50.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_elbow_joint": {
+      "group": "arms",
+      "effort_limit": 36.0,
+      "velocity_limit": 53.0,
+      "stiffness": 50.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_shoulder_pitch_joint": {
+      "group": "arms",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_shoulder_roll_joint": {
+      "group": "arms",
+      "effort_limit": 60.0,
+      "velocity_limit": 20.0,
+      "stiffness": 100.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_shoulder_yaw_joint": {
+      "group": "arms",
+      "effort_limit": 17.0,
+      "velocity_limit": 40.0,
+      "stiffness": 25.0,
+      "damping": 1.0,
+      "armature": 0.01
+    },
+    "right_wrist_joint": {
+      "group": "arms",
+      "effort_limit": 14.0,
+      "velocity_limit": 36.0,
+      "stiffness": 50.0,
+      "damping": 1.0,
+      "armature": 0.01
+    }
+  },
+  "implementation": "MJCF exposes independent torque inputs; coupled torque limits and delayed PD require a separate controller."
+}

@@ -1,0 +1,30 @@
+{
+  "training": {
+    "num_envs": 1024,
+    "total_env_steps": 50000000,
+    "buffer_size": 640000,
+    "buffer_device": "cpu",
+    "save_replay": false,
+    "save_every": 2048000,
+    "keep_checkpoints": 2,
+    "log_every": 10,
+    "compile": true,
+    "log_dir": "logs/bfm_zero/humanoid_light_cmu_lafan"
+  },
+  "motion": {
+    "root": ".",
+    "files": null,
+    "manifest": "outputs/humanoid_light_bfm/manifest.json",
+    "split": "train",
+    "expert_buffer_device": "cpu",
+    "source_weights": {"cmu": 0.5, "lafan": 0.5},
+    "variable_expert_rollout": true,
+    "cache_dir": "outputs/bfm_zero_cache/humanoid_light",
+    "validation_subject": null
+  },
+  "environment": {
+    "lie_down_probability": 0.3,
+    "observation_noise": false,
+    "domain_randomization": false
+  }
+}

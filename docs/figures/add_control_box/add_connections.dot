@@ -1,0 +1,32 @@
+digraph ADD {
+  graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.45", ranksep="0.65", fontname="DejaVu Sans", label="G1 box carry: time-aligned ADD reward + FlashSAC / mjlab", labelloc=t, fontsize=21];
+  node [shape=box, style="rounded,filled", color="#7592aa", fillcolor="#edf4fa", fontname="DejaVu Sans", fontsize=12, margin="0.15,0.12"];
+  edge [color="#57728a", fontname="DejaVu Sans", fontsize=10];
+  obs [label="Actor observation: 121D\lProprioception 67\lRelative box pose 9\lRelative goal XYZ 3\lPrevious action 29\lWrist / ankle XYZ 12\lReference phase 1\l"];
+  actor [label="FlashSAC actor\l128 hidden / 2 blocks\lOutput: Gaussian mean 29, std 29\lAction: tanh(sample), 29D\l"];
+  sim [label="mjlab G1 + physical box\lPD joint position control\l50 Hz policy / 200 Hz physics\lExact episode_00002 initial scene\l", fillcolor="#e8f5ef"];
+  ref [label="Reference at the SAME frame\lSingle recorded clip: 568 frames\lRobot features 85 + box features 24\l", fillcolor="#e8f5ef"];
+  diff [label="Reference - simulation, each frame: 109D\lRobot: world root XYZ / 6D rotation, velocities,\ljoints / joint velocities, wrists / ankles\lBox: world XYZ, relative XYZ / 6D rotation,\lrelative linear / angular velocity, hand-to-box XYZ\l", fillcolor="#fff3df"];
+  replay [label="Aligned replay (shared SAC ring)\l(obs, action, next obs, done, control terms)\lResidual(t), residual(t+1): 218D\l"];
+  norm [label="Differential normalizer\lDivide by running mean absolute error\lZero stays zero; no mean subtraction\l"];
+  zero [label="Positive target\lAll-zero residual pair, 218D\l", fillcolor="#e8f5ef"];
+  disc [label="ADD discriminator\l218 -> 512 ELU -> 256 ELU -> logit 1\lBCE + zero/policy logit gradient penalties\l+ output weight regularization\l"];
+  reward [label="Recompute replay reward with current D\lr_ADD = softplus(logit)\lCap at -log(0.0001)\lFlashSAC reward normalization\l", fillcolor="#fff3df"];
+  critic [label="Main double critic\lInput: obs 121 + action 29 = 150\l256 hidden / 2 blocks / 101 value bins\lOutput: Q1, Q2\l"];
+  aux [label="Auxiliary control double critic\lSame 150D input -> 2 scalar Q values\lAction rate / joint limits / feet / contacts\lSmall balanced actor Q bonus\l"];
+  obs -> actor;
+  actor -> sim [label="29 joint actions"];
+  sim -> obs [label="next state", constraint=false];
+  sim -> diff [label="current robot + box"];
+  ref -> diff;
+  diff -> replay;
+  replay -> norm [label="negative residual pair"];
+  norm -> disc;
+  zero -> disc;
+  disc -> reward;
+  reward -> critic [label="SAC reward"];
+  replay -> critic [label="SAC transition"];
+  replay -> aux [label="control costs"];
+  critic -> actor [label="policy gradient through Q", constraint=false];
+  aux -> actor [label="control Q bonus", constraint=false];
+}

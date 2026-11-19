@@ -1,0 +1,28 @@
+digraph G {
+rankdir=TB;
+graph [bgcolor="white", pad="0.4", nodesep="0.45", ranksep="0.65", fontname="Noto Sans CJK KR", fontsize=24, labelloc=t];
+node [shape=box, style="rounded,filled", color="#61718b", fontname="Noto Sans CJK KR", fontsize=15, fontcolor="#16243b", margin="0.2,0.15"];
+edge [color="#526985", fontname="Noto Sans CJK KR", fontsize=12, arrowsize=0.8];
+label="AMP Discriminator · feature · reward\n로봇·상자 상호작용 prior / goal·contact·action·stage 조건은 입력하지 않음";
+features [label="단일 상태 Φ(s): 104\nroot 높이: 1\nheading 제거 root 회전 6D: 6\nheading 기준 root 선속도: 3\nheading 기준 root 각속도: 3\n29관절 위치 (이름 순서 정합): 29\n29관절 속도: 29\n양손·양발 상대 위치 (동일 G1 FK): 12\nheading 기준 상자 상대 위치: 3\nheading 기준 상자 회전 6D: 6\nheading 기준 상자−root 선속도: 3\nheading 기준 상자−root 각속도: 3\n양손목에서 상자 중심까지 벡터: 6", fillcolor="#fff0dc"];
+pair [label="20 ms 인접 상태 쌍\n[Φ(s_t), Φ(s_t+1)]\n104 + 104 = 208\nclip/reset 경계를 넘지 않음", fillcolor="#fff0dc"];
+normalize [label="Frozen expert-train normalizer\n각 104차원에 같은 mean/std\nstd ≥ 0.1 / clip [−10, 10]\nvalidation 통계를 사용하지 않음", fillcolor="#fff0dc"];
+features -> pair [label=""];
+pair -> normalize [label=""];
+hidden_0 [label="Linear 208 → 512\nELU", fillcolor="#fff0dc"];
+normalize -> hidden_0 [label=""];
+hidden_1 [label="Linear 512 → 256\nELU", fillcolor="#fff0dc"];
+hidden_0 -> hidden_1 [label=""];
+score [label="Linear 256 → 1\nraw score Dψ\nexpert target +1\npolicy target −1", fillcolor="#fff0dc"];
+hidden_1 -> score [label=""];
+loss [label="L_D = E[(D_expert−1)²]\n+ E[(D_policy+1)²]\n+ (10/2) E[||∇x D_expert||²]\nAdam lr=1e-05 / FP32", fillcolor="#f1f4f8"];
+reward [label="r_AMP = max(0, 1−0.25(D−1)²)\nrange [0, 1], scale=1\nD=+1 → 1 / D=−1 → 0", fillcolor="#fff8cc"];
+sac [label="현재 D로 replay reward 재계산\nFlashSAC reward normalization\n1-step TD / task reward = 0\ncritic을 통해 actor 학습", fillcolor="#eee8fa"];
+score -> loss [label="ψ만 업데이트"];
+loss -> score [constraint="false",label="gradient"];
+score -> reward [label="no_grad; score는 확률이 아님"];
+reward -> sac [label=""];
+{rank=same; features; pair; normalize;}
+{rank=same; hidden_0; hidden_1; score;}
+{rank=same; loss; reward; sac;}
+}

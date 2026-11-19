@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "name": "colab",
+  "device": "cuda:0",
+  "data_root": "${repo}",
+  "cache_root": "/content/humanoid_cache",
+  "run_root": "/content/humanoid_runs",
+  "persistent_root": "/content/drive/MyDrive/humanoid_rl/runs",
+  "overrides": {
+    "supermimic": {
+      "training": {"num_envs": 64, "compile": false},
+      "runner": {
+        "wm": {"batch_size": 64},
+        "policy": {"batch_size": 32}
+      }
+    }
+  },
+  "env": {"MUJOCO_GL": "egl", "OMP_NUM_THREADS": "2"},
+  "sync_interval_seconds": 60
+}

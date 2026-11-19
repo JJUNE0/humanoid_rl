@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "light_supermimic_walk1_t4",
+  "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking",
+  "robot": "humanoid_light",
+  "description": "LAFAN walk1_subject1 tracking tuned for Colab T4 15GB (1024 envs, 1024 batch, coupled-PD scale, ReturnSampler, 15 key bodies)",
+  "config": {
+    "training": {
+      "num_envs": 1024,
+      "total_env_steps": 8192000,
+      "warmup_steps": 32,
+      "updates_per_step": 1,
+      "save_every": 1024000,
+      "log_every": 20,
+      "compile": false,
+      "cuda_graphs": true,
+      "muon_dtype": "float16",
+      "buffer_size": 512
+    },
+    "motion": {
+      "manifest": "${data_root}/configs/motions/light_supermimic_walk1.json"
+    },
+    "environment": {
+      "action_mode": "coupled_scale",
+      "action_scale": 0.25,
+      "key_bodies_only": true
+    },
+    "runner": {
+      "sampling_mode": "return",
+      "dynamics_hidden_dims": [1024, 1024, 1024],
+      "actor_hidden_dims": [1024, 512, 256],
+      "critic_hidden_dims": [256, 128],
+      "wm": {
+        "num_batches": 2,
+        "batch_size": 1024,
+        "horizon": 8
+      },
+      "policy": {
+        "num_batches": 1,
+        "batch_size": 1024,
+        "horizon": 32
+      }
+    }
+  },
+  "inputs": []
+}

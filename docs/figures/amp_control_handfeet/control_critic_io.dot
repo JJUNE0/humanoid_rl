@@ -1,0 +1,29 @@
+digraph G {
+rankdir=TB;
+graph [bgcolor="white", pad="0.4", nodesep="0.45", ranksep="0.65", fontname="Noto Sans CJK KR", fontsize=24, labelloc=t];
+node [shape=box, style="rounded,filled", color="#61718b", fontname="Noto Sans CJK KR", fontsize=15, fontcolor="#16243b", margin="0.2,0.15"];
+edge [color="#526985", fontname="Noto Sans CJK KR", fontsize=12, arrowsize=0.8];
+label="Control critic 입출력 · FB 없음\nAMP 보상과 별도의 제어 비용 학습";
+costs [label="환경에서 계산: reset 전\nΔaction², 발 기울기, 발목 roll²\n95% joint limit 초과, 발 속도 × 접촉, 비희망 몸체 접촉", fillcolor="#e7f5ed"];
+weight [label="6개 raw 비용\n가중치 [−0.1, −0.4, −4, −10, −4, −1]\n합산 r_aux ≤ 0", fillcolor="#e7f5ed"];
+norm [label="EMA variance, decay 0.99\nr_aux / std(r_aux)\nmean subtraction 없음", fillcolor="#fff8cc"];
+input [label="concat observation + action\n120 + 29 = 149\nQ1_aux, Q2_aux 독립 ensemble", fillcolor="#eee8fa"];
+trunk [label="FlashSAC critic trunk 재사용\nembed → 2 blocks (width 256)\nUnitBatchNorm / residual / UnitRMSNorm", fillcolor="#eee8fa"];
+head [label="각 critic: scalar linear head\n출력 Q1_aux, Q2_aux\n음수 return: 범위 제한 없음", fillcolor="#eee8fa"];
+target [label="Target twin critic, EMA τ=0.01\ny = normalized_cost + γ(1−terminated) min Q_target(o′,a′)\ntimeout bootstrap / success stop / entropy 제외", fillcolor="#eee8fa"];
+loss [label="MSE(Q_aux, y)\n별도 Adam + FlashSAC LR schedule\ngrad norm clip 10", fillcolor="#f1f4f8"];
+actor [label="Actor 목적: max Q_AMP + c·min Q_aux + αH\nc = 0.02 · stopgrad(mean|Q_AMP| / max(mean|Q_aux|, 1))\ncritic parameter freeze / action gradient만 전달", fillcolor="#e8f2ff"];
+costs -> weight [label=""];
+weight -> norm [label=""];
+input -> trunk [label=""];
+trunk -> head [label=""];
+head -> loss [label=""];
+norm -> target [label=""];
+target -> loss [label=""];
+loss -> head [constraint="false",label="optimizer"];
+head -> target [constraint="false",label="parameter EMA"];
+head -> actor [label="dQ/da"];
+{rank=same; costs; input;}
+{rank=same; norm; head;}
+{rank=same; target; loss; actor;}
+}

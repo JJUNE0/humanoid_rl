@@ -1,0 +1,188 @@
+[
+  {
+    "first": "pelvis_link",
+    "second": "left_hip_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "pelvis_link",
+    "second": "right_hip_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "pelvis_link",
+    "second": "torso_yaw_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_hip_pitch_link",
+    "second": "left_hip_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_hip_roll_link",
+    "second": "left_hip_yaw_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_hip_yaw_link",
+    "second": "left_knee_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_knee_link",
+    "second": "left_ankle_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_knee_link",
+    "second": "left_ankle_roll_link",
+    "reason": "overlapping short ancestor joint housing in original neutral model",
+    "neutral_distance_m": -0.04254882112325464
+  },
+  {
+    "first": "left_ankle_pitch_link",
+    "second": "left_ankle_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_hip_pitch_link",
+    "second": "right_hip_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_hip_roll_link",
+    "second": "right_hip_yaw_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_hip_yaw_link",
+    "second": "right_knee_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_knee_link",
+    "second": "right_ankle_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_knee_link",
+    "second": "right_ankle_roll_link",
+    "reason": "overlapping short ancestor joint housing in original neutral model",
+    "neutral_distance_m": -0.04255320857562564
+  },
+  {
+    "first": "right_ankle_pitch_link",
+    "second": "right_ankle_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_yaw_link",
+    "second": "torso_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_yaw_link",
+    "second": "torso_roll_link",
+    "reason": "overlapping short ancestor joint housing in original neutral model",
+    "neutral_distance_m": -0.035999988850097406
+  },
+  {
+    "first": "torso_pitch_link",
+    "second": "torso_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_roll_link",
+    "second": "head_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_roll_link",
+    "second": "left_shoulder_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_roll_link",
+    "second": "lower_cam_link",
+    "reason": "same rigid assembly",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "torso_roll_link",
+    "second": "right_shoulder_pitch_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "head_link",
+    "second": "head_cam_link",
+    "reason": "same rigid assembly",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_shoulder_pitch_link",
+    "second": "left_shoulder_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_shoulder_roll_link",
+    "second": "left_shoulder_yaw_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_shoulder_yaw_link",
+    "second": "left_elbow_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "left_elbow_link",
+    "second": "left_wrist_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_shoulder_pitch_link",
+    "second": "right_shoulder_roll_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_shoulder_roll_link",
+    "second": "right_shoulder_yaw_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_shoulder_yaw_link",
+    "second": "right_elbow_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  },
+  {
+    "first": "right_elbow_link",
+    "second": "right_wrist_link",
+    "reason": "directly joined bodies",
+    "neutral_distance_m": null
+  }
+]

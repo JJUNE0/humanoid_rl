@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "name": "light_supermimic_lafan_cmu_wb_soft",
+  "method": "supermimic",
+  "task": "Humanoid-Light-Motion-Tracking",
+  "robot": "humanoid_light",
+  "description": "Whole-body 3-tier soft-contact BPTT fine-tuning (Tier 1 head protection + Tier 2 conditional wrist/elbow/knee/pelvis cushion + Tier 3 soft footsteps) on full LAFAN+CMU from 196.6M base",
+  "config": {
+    "training": {
+      "init_from": "${data_root}/runs/light_supermimic_lafan_cmu_full/rtx3090_lafan_cmu_full_20261119/training/checkpoints/step_196608000",
+      "num_envs": 2048,
+      "total_env_steps": 20480000,
+      "warmup_steps": 32,
+      "updates_per_step": 1,
+      "save_every": 4096000,
+      "log_every": 25,
+      "compile": true,
+      "cuda_graphs": true,
+      "muon_dtype": "bfloat16",
+      "buffer_size": 512
+    },
+    "motion": {
+      "manifest": "${data_root}/outputs/humanoid_light_bfm/manifest.json"
+    },
+    "environment": {
+      "action_mode": "coupled_scale",
+      "action_scale": 0.25,
+      "key_bodies_only": true,
+      "whole_body_contact": {
+        "enabled": true,
+        "impact_scale": 1.0,
+        "slip_scale": 1.0,
+        "v_free": 0.18,
+        "impact_height": 0.050,
+        "impact_tau": 0.012,
+        "slip_height": 0.010,
+        "slip_tau": 0.004,
+        "head_forbid_weight": 400.0,
+        "head_safe_height": 0.045,
+        "unintended_weight": 150.0,
+        "unintended_height": 0.025,
+        "ref_air_height": 0.060,
+        "ref_air_tau": 0.015,
+        "clear_tau": 0.008,
+        "extra_action_rate_weight": 0.08
+      }
+    },
+    "runner": {
+      "sampling_mode": "return",
+      "dynamics_hidden_dims": [1024, 1024, 1024],
+      "actor_hidden_dims": [1024, 1024, 512, 256],
+      "critic_hidden_dims": [512, 256],
+      "wm": {
+        "num_batches": 2,
+        "batch_size": 2048,
+        "horizon": 8
+      },
+      "policy": {
+        "lr": 0.0001,
+        "num_batches": 1,
+        "batch_size": 2048,
+        "horizon": 32
+      }
+    }
+  },
+  "inputs": []
+}

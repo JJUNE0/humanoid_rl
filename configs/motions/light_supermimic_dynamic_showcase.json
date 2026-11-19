@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "robot": "humanoid_light",
+  "fps": 50,
+  "screen_version": "93fd5ab448ee923eb85534db7169a68998e9989f97937e369840a72acea9f9173cd21d173a027aba3cd54fefc359041ad7a69e32f3265bf57046c376813a93120635edffc28917d07ce0223c7eabc00d26a947a519e9472510e9fef829b391c27693d50fde9411f2321e3760f843537b620f31911a87dfd8dc1749f6100ed47425",
+  "min_frames": 25,
+  "notes": "Curated 17-clip Dynamic & Acrobatic Showcase Playlist in exact user-requested order",
+  "splits": {
+    "train": [
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_30.npz",
+        "sha256": "65063787c9fadf3550cd91cc94109b020a11a67780aaed029c794234700e21c9",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_30",
+        "start_frame": 0,
+        "stop_frame": 209,
+        "showcase_label": "러시안 댄스 1 (Russian Dance)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_30.npz",
+        "sha256": "65063787c9fadf3550cd91cc94109b020a11a67780aaed029c794234700e21c9",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_30",
+        "start_frame": 215,
+        "stop_frame": 443,
+        "showcase_label": "러시안 댄스 2 (Squat Kicks)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_32.npz",
+        "sha256": "108604c43c367da98883880f2bd8f1565483678844b05a5c112a326484320361",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_32",
+        "start_frame": 0,
+        "stop_frame": 301,
+        "showcase_label": "문워크 (Moonwalk)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_06.npz",
+        "sha256": "4886d2a78aa7e4a758d829cbafd6f4a68df69c8a96f3f76922ef7a1d13624756",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_06",
+        "start_frame": 211,
+        "stop_frame": 260,
+        "showcase_label": "점프 발차기 (CMU Jump Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_28.npz",
+        "sha256": "07aae202ebff09322ccbe02c69afbfb1df05a66920bc9440972816f25c51d58e",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_28",
+        "start_frame": 0,
+        "stop_frame": 128,
+        "showcase_label": "브레이크댄스 스텝 (Breakdance)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/10_01.npz",
+        "sha256": "bcfde94b3b31e83d900d4cb567035fed2c73cd33ae471cc209ce9029d4eb0d9f",
+        "source": "cmu",
+        "subject": 10,
+        "name": "10_01",
+        "start_frame": 0,
+        "stop_frame": 247,
+        "showcase_label": "축구 풀스윙 슛 (Soccer Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/75_16.npz",
+        "sha256": "f302b22f49718945e566f2fb17cf114569bf58ae223c09093992f4086c8a6f95",
+        "source": "cmu",
+        "subject": 75,
+        "name": "75_16",
+        "start_frame": 0,
+        "stop_frame": 286,
+        "showcase_label": "공중 고점 점프킥 (+37cm Jump Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/75_08.npz",
+        "sha256": "519456efbf6552d514423e987757233f04a78ec2ced22ecdd4114f861c4d4a66",
+        "source": "cmu",
+        "subject": 75,
+        "name": "75_08",
+        "start_frame": 0,
+        "stop_frame": 501,
+        "showcase_label": "360도 회전 점프 (+35cm 360 Jump)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject5.npz",
+        "sha256": "5dac050d18f1fa396ce9edf0dc4dd19362b11ffe8d8c6949742a1b284cd6e962",
+        "source": "lafan",
+        "subject": 5,
+        "name": "jumps1_subject5",
+        "start_frame": 10360,
+        "stop_frame": 10861,
+        "showcase_label": "LAFAN 연속 점프 (Unseen Jumps)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/fight1_subject5.npz",
+        "sha256": "33a7e4d44361717dc679f0a5a4f2d7fc77cd95f9bef179d59866d7606821b0e4",
+        "source": "lafan",
+        "subject": 5,
+        "name": "fight1_subject5",
+        "start_frame": 234,
+        "stop_frame": 604,
+        "showcase_label": "격투 / 발차기 콤보 (Fight Combo)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject5.npz",
+        "sha256": "ecc8494d86a4e17f3824d92bd53a6eb02e3a38c55d2cfa1e64abe93aefd5686f",
+        "source": "lafan",
+        "subject": 5,
+        "name": "dance2_subject5",
+        "start_frame": 0,
+        "stop_frame": 501,
+        "showcase_label": "빠른 댄스 (Fast Dance)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 0,
+        "stop_frame": 323,
+        "showcase_label": "미학습 전력 달리기 (Fast Run)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_19.npz",
+        "sha256": "516f5826a59460c48159966e67f7d8900f03137b100663e7139497d7a5a8855a",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_19",
+        "start_frame": 0,
+        "stop_frame": 433,
+        "showcase_label": "[한계테스트] 몽키 백플립 (Monkey Backflip)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_12.npz",
+        "sha256": "6941f2af709916ddbcef30f9fed545518d583c782c08b8d4ee1ddab86b581171",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_12",
+        "start_frame": 0,
+        "stop_frame": 344,
+        "showcase_label": "[한계테스트] 백플립 트위스트 (Backflip Twist)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_01.npz",
+        "sha256": "a1370003b964948e79123a15515b3505e8a609019c39f4b59f25e62333ee2664",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_01",
+        "start_frame": 0,
+        "stop_frame": 329,
+        "showcase_label": "[한계테스트] 제자리 백덤블링 (Backward Somersault)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_02.npz",
+        "sha256": "d93d70b86f95384321f3becf8ba4d3d5a44e1460131e6910116970194075d66a",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_02",
+        "start_frame": 0,
+        "stop_frame": 326,
+        "showcase_label": "[한계테스트] 측전 / 옆돌기 (Cartwheel)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_14.npz",
+        "sha256": "23375d7119419decee83c14c2d831d13c9a0de9d79550fa4e8053c39ac3286b8",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_14",
+        "start_frame": 0,
+        "stop_frame": 349,
+        "showcase_label": "[한계테스트] 전방 핸드스프링 (Front Hand Flip)"
+      }
+    ],
+    "validation": [
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_30.npz",
+        "sha256": "65063787c9fadf3550cd91cc94109b020a11a67780aaed029c794234700e21c9",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_30",
+        "start_frame": 0,
+        "stop_frame": 209,
+        "showcase_label": "러시안 댄스 1 (Russian Dance)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_30.npz",
+        "sha256": "65063787c9fadf3550cd91cc94109b020a11a67780aaed029c794234700e21c9",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_30",
+        "start_frame": 215,
+        "stop_frame": 443,
+        "showcase_label": "러시안 댄스 2 (Squat Kicks)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_32.npz",
+        "sha256": "108604c43c367da98883880f2bd8f1565483678844b05a5c112a326484320361",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_32",
+        "start_frame": 0,
+        "stop_frame": 301,
+        "showcase_label": "문워크 (Moonwalk)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_06.npz",
+        "sha256": "4886d2a78aa7e4a758d829cbafd6f4a68df69c8a96f3f76922ef7a1d13624756",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_06",
+        "start_frame": 211,
+        "stop_frame": 260,
+        "showcase_label": "점프 발차기 (CMU Jump Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_28.npz",
+        "sha256": "07aae202ebff09322ccbe02c69afbfb1df05a66920bc9440972816f25c51d58e",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_28",
+        "start_frame": 0,
+        "stop_frame": 128,
+        "showcase_label": "브레이크댄스 스텝 (Breakdance)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/10_01.npz",
+        "sha256": "bcfde94b3b31e83d900d4cb567035fed2c73cd33ae471cc209ce9029d4eb0d9f",
+        "source": "cmu",
+        "subject": 10,
+        "name": "10_01",
+        "start_frame": 0,
+        "stop_frame": 247,
+        "showcase_label": "축구 풀스윙 슛 (Soccer Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/75_16.npz",
+        "sha256": "f302b22f49718945e566f2fb17cf114569bf58ae223c09093992f4086c8a6f95",
+        "source": "cmu",
+        "subject": 75,
+        "name": "75_16",
+        "start_frame": 0,
+        "stop_frame": 286,
+        "showcase_label": "공중 고점 점프킥 (+37cm Jump Kick)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/75_08.npz",
+        "sha256": "519456efbf6552d514423e987757233f04a78ec2ced22ecdd4114f861c4d4a66",
+        "source": "cmu",
+        "subject": 75,
+        "name": "75_08",
+        "start_frame": 0,
+        "stop_frame": 501,
+        "showcase_label": "360도 회전 점프 (+35cm 360 Jump)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject5.npz",
+        "sha256": "5dac050d18f1fa396ce9edf0dc4dd19362b11ffe8d8c6949742a1b284cd6e962",
+        "source": "lafan",
+        "subject": 5,
+        "name": "jumps1_subject5",
+        "start_frame": 10360,
+        "stop_frame": 10861,
+        "showcase_label": "LAFAN 연속 점프 (Unseen Jumps)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/fight1_subject5.npz",
+        "sha256": "33a7e4d44361717dc679f0a5a4f2d7fc77cd95f9bef179d59866d7606821b0e4",
+        "source": "lafan",
+        "subject": 5,
+        "name": "fight1_subject5",
+        "start_frame": 234,
+        "stop_frame": 604,
+        "showcase_label": "격투 / 발차기 콤보 (Fight Combo)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject5.npz",
+        "sha256": "ecc8494d86a4e17f3824d92bd53a6eb02e3a38c55d2cfa1e64abe93aefd5686f",
+        "source": "lafan",
+        "subject": 5,
+        "name": "dance2_subject5",
+        "start_frame": 0,
+        "stop_frame": 501,
+        "showcase_label": "빠른 댄스 (Fast Dance)"
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 0,
+        "stop_frame": 323,
+        "showcase_label": "미학습 전력 달리기 (Fast Run)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_19.npz",
+        "sha256": "516f5826a59460c48159966e67f7d8900f03137b100663e7139497d7a5a8855a",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_19",
+        "start_frame": 0,
+        "stop_frame": 433,
+        "showcase_label": "[한계테스트] 몽키 백플립 (Monkey Backflip)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_12.npz",
+        "sha256": "6941f2af709916ddbcef30f9fed545518d583c782c08b8d4ee1ddab86b581171",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_12",
+        "start_frame": 0,
+        "stop_frame": 344,
+        "showcase_label": "[한계테스트] 백플립 트위스트 (Backflip Twist)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_01.npz",
+        "sha256": "a1370003b964948e79123a15515b3505e8a609019c39f4b59f25e62333ee2664",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_01",
+        "start_frame": 0,
+        "stop_frame": 329,
+        "showcase_label": "[한계테스트] 제자리 백덤블링 (Backward Somersault)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_02.npz",
+        "sha256": "d93d70b86f95384321f3becf8ba4d3d5a44e1460131e6910116970194075d66a",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_02",
+        "start_frame": 0,
+        "stop_frame": 326,
+        "showcase_label": "[한계테스트] 측전 / 옆돌기 (Cartwheel)"
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/90_14.npz",
+        "sha256": "23375d7119419decee83c14c2d831d13c9a0de9d79550fa4e8053c39ac3286b8",
+        "source": "cmu",
+        "subject": 90,
+        "name": "90_14",
+        "start_frame": 0,
+        "stop_frame": 349,
+        "showcase_label": "[한계테스트] 전방 핸드스프링 (Front Hand Flip)"
+      }
+    ]
+  }
+}

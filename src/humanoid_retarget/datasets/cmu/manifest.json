@@ -1,0 +1,59 @@
+{
+  "dataset": "CMU Graphics Lab Motion Capture Database",
+  "subject": 88,
+  "retrieved_utc": "2026-10-31T01:56:34.924508+00:00",
+  "files": [
+    {
+      "path": "raw/88.asf",
+      "source_url": "http://mocap.cs.cmu.edu/subjects/88/88.asf",
+      "bytes": 7255,
+      "sha256": "cfce91b99b361b4f5554cff8b772285c285216bd5f09d4e27357ad750cca2470"
+    },
+    {
+      "path": "raw/88_01.amc",
+      "source_url": "http://mocap.cs.cmu.edu/subjects/88/88_01.amc",
+      "bytes": 161181,
+      "sha256": "36a04b3a25d035ab599e1565add2872a99964858e3cf0c9df3a43e57eab5a03c"
+    },
+    {
+      "path": "raw/88_05.amc",
+      "source_url": "http://mocap.cs.cmu.edu/subjects/88/88_05.amc",
+      "bytes": 118518,
+      "sha256": "02bcbb412c801ea62887998aaa1da4becac46f31424b108e8d066b5596198340"
+    },
+    {
+      "path": "raw/88_01.c3d.header",
+      "source_url": "http://mocap.cs.cmu.edu/subjects/88/88_01.c3d",
+      "bytes": 512,
+      "sha256": "3c6987464847dea91bc9b8e9f2b51d35c5323895869285466783e9f4341baa5f",
+      "partial_download": "bytes 0-511 only",
+      "timing": {
+        "fps": 60.0,
+        "first_frame": 1221,
+        "last_frame": 1422,
+        "frames": 202
+      }
+    },
+    {
+      "path": "raw/88_05.c3d.header",
+      "source_url": "http://mocap.cs.cmu.edu/subjects/88/88_05.c3d",
+      "bytes": 512,
+      "sha256": "b1068af951239a7b682e0e907d93bdcdb5b916b682364885b683ad7afbfde74d",
+      "partial_download": "bytes 0-511 only",
+      "timing": {
+        "fps": 60.0,
+        "first_frame": 122,
+        "last_frame": 270,
+        "frames": 149
+      }
+    }
+  ],
+  "clips": {
+    "88_01": "backflip",
+    "88_05": "cartwheel into backflip"
+  },
+  "source_index_url": "http://mocap.cs.cmu.edu/search.php?subjectnumber=88",
+  "units_reference_url": "http://mocap.cs.cmu.edu/faqs.php",
+  "original_motion_files_untouched": true,
+  "original_motion_and_skeleton_bytes": 286954
+}

@@ -1,0 +1,882 @@
+{
+  "version": 1,
+  "robot": "humanoid_light",
+  "fps": 50,
+  "screen_version": "93fd5ab448ee923eb85534db7169a68998e9989f97937e369840a72acea9f9173cd21d173a027aba3cd54fefc359041ad7a69e32f3265bf57046c376813a93120635edffc28917d07ce0223c7eabc00d26a947a519e9472510e9fef829b391c27693d50fde9411f2321e3760f843537b620f31911a87dfd8dc1749f6100ed47425",
+  "min_frames": 25,
+  "splits": {
+    "train": [
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/01_02.npz",
+        "sha256": "102dc6d856a300e91cad703a3964512033b06d93b1ca598293ad19ebf93957ec",
+        "source": "cmu",
+        "subject": 1,
+        "name": "01_02",
+        "start_frame": 0,
+        "stop_frame": 1811
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/02_05.npz",
+        "sha256": "db125ca346c193367d5b7c3cca00e54e909a9bccca72828d6dd198e190eba879",
+        "source": "cmu",
+        "subject": 2,
+        "name": "02_05",
+        "start_frame": 0,
+        "stop_frame": 773
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/06_07.npz",
+        "sha256": "d3e03e040f843ab51eec5a8104d615fd2e9c612e0bb486a7ddd90cc74b975789",
+        "source": "cmu",
+        "subject": 6,
+        "name": "06_07",
+        "start_frame": 0,
+        "stop_frame": 240
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/104_01.npz",
+        "sha256": "f286fa39404c344f226fe40dde439c001ce135fbc460ac13f5c1c5fe154a3237",
+        "source": "cmu",
+        "subject": 104,
+        "name": "104_01",
+        "start_frame": 0,
+        "stop_frame": 161
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/106_12.npz",
+        "sha256": "b80f7c7e9504c8e77f083ac3262a348f50944cc4120819e5bb690ce58c8c62a6",
+        "source": "cmu",
+        "subject": 106,
+        "name": "106_12",
+        "start_frame": 0,
+        "stop_frame": 237
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/118_15.npz",
+        "sha256": "e7b0334e5c5a1239ab1edc3877ffdda91921d2dd974652c4a4fee54e4d355098",
+        "source": "cmu",
+        "subject": 118,
+        "name": "118_15",
+        "start_frame": 0,
+        "stop_frame": 267
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/125_07.npz",
+        "sha256": "2da565d22c23af9ccd3986954b0a9dfbfe4f03dcffa520c0ef381a1c34d8eb55",
+        "source": "cmu",
+        "subject": 125,
+        "name": "125_07",
+        "start_frame": 0,
+        "stop_frame": 151
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/138_35.npz",
+        "sha256": "22740e30036c04fcb6e4ad691daa67c4b19c33772e203e1cec8fc03edb2b3c18",
+        "source": "cmu",
+        "subject": 138,
+        "name": "138_35",
+        "start_frame": 0,
+        "stop_frame": 379
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/139_24.npz",
+        "sha256": "21ffb26b130cd34ea63c01f02a598c980801ca88b28633e1e86d3e6d94552f7a",
+        "source": "cmu",
+        "subject": 139,
+        "name": "139_24",
+        "start_frame": 0,
+        "stop_frame": 298
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/16_08.npz",
+        "sha256": "71b4929b2c1cdc22c7da764c7f959323c0f2b940f6be900341c4a26a8c56279b",
+        "source": "cmu",
+        "subject": 16,
+        "name": "16_08",
+        "start_frame": 0,
+        "stop_frame": 100
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/22_25.npz",
+        "sha256": "492d2e7ddbcf55042824fa65a6c10886d4a9abd5cc53c7ee6d31764dc9ae254c",
+        "source": "cmu",
+        "subject": 22,
+        "name": "22_25",
+        "start_frame": 0,
+        "stop_frame": 73
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/23_06.npz",
+        "sha256": "adcb9a4816fba168528489da204a7104916b9f4fb7312e27394a0a358985273f",
+        "source": "cmu",
+        "subject": 23,
+        "name": "23_06",
+        "start_frame": 0,
+        "stop_frame": 210
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/49_05.npz",
+        "sha256": "7801bfce22c052bd4876ea59ed3b6b3fd7bf4e7eb58d0d02c38171d65f8e2153",
+        "source": "cmu",
+        "subject": 49,
+        "name": "49_05",
+        "start_frame": 0,
+        "stop_frame": 68
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/61_09.npz",
+        "sha256": "ac149075f8899b8bcc73a207a30d24587f33ad82e7860587234314f1608c7097",
+        "source": "cmu",
+        "subject": 61,
+        "name": "61_09",
+        "start_frame": 0,
+        "stop_frame": 867
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/61_09.npz",
+        "sha256": "ac149075f8899b8bcc73a207a30d24587f33ad82e7860587234314f1608c7097",
+        "source": "cmu",
+        "subject": 61,
+        "name": "61_09",
+        "start_frame": 874,
+        "stop_frame": 1794
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/61_09.npz",
+        "sha256": "ac149075f8899b8bcc73a207a30d24587f33ad82e7860587234314f1608c7097",
+        "source": "cmu",
+        "subject": 61,
+        "name": "61_09",
+        "start_frame": 1800,
+        "stop_frame": 2146
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/93_03.npz",
+        "sha256": "5a361204a0910d665ac6f224210ba448a05f5af2016ea8c2249c082edf7bf499",
+        "source": "cmu",
+        "subject": 93,
+        "name": "93_03",
+        "start_frame": 0,
+        "stop_frame": 184
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/94_06.npz",
+        "sha256": "0bec4b19cce746ad81b7654f6dafde9ee6c11354b8372751c9be05454bb7e1d9",
+        "source": "cmu",
+        "subject": 94,
+        "name": "94_06",
+        "start_frame": 0,
+        "stop_frame": 43
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/94_06.npz",
+        "sha256": "0bec4b19cce746ad81b7654f6dafde9ee6c11354b8372751c9be05454bb7e1d9",
+        "source": "cmu",
+        "subject": 94,
+        "name": "94_06",
+        "start_frame": 49,
+        "stop_frame": 1048
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 0,
+        "stop_frame": 1704
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 1710,
+        "stop_frame": 2034
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 2040,
+        "stop_frame": 2146
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 2156,
+        "stop_frame": 2666
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 2673,
+        "stop_frame": 2744
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 2750,
+        "stop_frame": 4337
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 4343,
+        "stop_frame": 5406
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 5412,
+        "stop_frame": 6134
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 6140,
+        "stop_frame": 6198
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 6204,
+        "stop_frame": 6653
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 6659,
+        "stop_frame": 7918
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 7924,
+        "stop_frame": 8433
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 8439,
+        "stop_frame": 9745
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 9751,
+        "stop_frame": 9822
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 9845,
+        "stop_frame": 10017
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/dance2_subject1.npz",
+        "sha256": "6026cd436b32c6f398b11796a3706234ab436341d5961a680c064c848037a6e8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "dance2_subject1",
+        "start_frame": 10023,
+        "stop_frame": 11284
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 0,
+        "stop_frame": 2285
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 2291,
+        "stop_frame": 4406
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 4412,
+        "stop_frame": 5222
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 5229,
+        "stop_frame": 5405
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 5411,
+        "stop_frame": 5893
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 5907,
+        "stop_frame": 5947
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 5953,
+        "stop_frame": 6197
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 6203,
+        "stop_frame": 6834
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 6840,
+        "stop_frame": 7009
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 7021,
+        "stop_frame": 7574
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 7580,
+        "stop_frame": 8914
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject2.npz",
+        "sha256": "5b5f08dea91b67c6e9d181a2b742a4b8f66dacf71bc362ef4fa6d1ff9e0eb8c3",
+        "source": "lafan",
+        "subject": 2,
+        "name": "ground2_subject2",
+        "start_frame": 8920,
+        "stop_frame": 9249
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 0,
+        "stop_frame": 402
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 408,
+        "stop_frame": 494
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 500,
+        "stop_frame": 1990
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 1996,
+        "stop_frame": 2791
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 2819,
+        "stop_frame": 4042
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 4048,
+        "stop_frame": 4087
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 4102,
+        "stop_frame": 4140
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 4146,
+        "stop_frame": 4438
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 4444,
+        "stop_frame": 4827
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 4834,
+        "stop_frame": 5082
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 5090,
+        "stop_frame": 7459
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/ground2_subject3.npz",
+        "sha256": "ed3651c3a31d22c623b9cb4f3e64b254ec9be829cd873df94a63513659c08cac",
+        "source": "lafan",
+        "subject": 3,
+        "name": "ground2_subject3",
+        "start_frame": 7465,
+        "stop_frame": 9249
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 0,
+        "stop_frame": 1855
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 1861,
+        "stop_frame": 1905
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 1911,
+        "stop_frame": 8370
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 8376,
+        "stop_frame": 9930
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 9936,
+        "stop_frame": 9998
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10004,
+        "stop_frame": 10271
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10281,
+        "stop_frame": 10593
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10620,
+        "stop_frame": 10692
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10698,
+        "stop_frame": 10762
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10768,
+        "stop_frame": 10799
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 10805,
+        "stop_frame": 11889
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/jumps1_subject2.npz",
+        "sha256": "bc60f37cdce78cd2613a43428adcd13d0efb3327fa41cdd0c5cb83e87b9b098e",
+        "source": "lafan",
+        "subject": 2,
+        "name": "jumps1_subject2",
+        "start_frame": 11895,
+        "stop_frame": 12222
+      }
+    ],
+    "validation": [
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/40_08.npz",
+        "sha256": "fc26a16cdd289fb4cc9a63c4d5a8ca8bb901e636a6dd56cfdf9aafd2d61d43e5",
+        "source": "cmu",
+        "subject": 40,
+        "name": "40_08",
+        "start_frame": 0,
+        "stop_frame": 2900
+      },
+      {
+        "path": "outputs/humanoid_light_cmu_full/motions/80_61.npz",
+        "sha256": "3143801cb07814dccd7a3d9d3d0187555bde02bfbbb0f51f2c9cc64d82446dab",
+        "source": "cmu",
+        "subject": 80,
+        "name": "80_61",
+        "start_frame": 0,
+        "stop_frame": 881
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 0,
+        "stop_frame": 224
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 230,
+        "stop_frame": 313
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 337,
+        "stop_frame": 468
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 483,
+        "stop_frame": 520
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 526,
+        "stop_frame": 747
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 753,
+        "stop_frame": 788
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 829,
+        "stop_frame": 927
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 933,
+        "stop_frame": 1000
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 1048,
+        "stop_frame": 1196
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 1202,
+        "stop_frame": 1500
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 1506,
+        "stop_frame": 1866
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 1872,
+        "stop_frame": 1951
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 1957,
+        "stop_frame": 2055
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 2061,
+        "stop_frame": 2612
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 2618,
+        "stop_frame": 3603
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 3609,
+        "stop_frame": 4099
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 4105,
+        "stop_frame": 6948
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 6971,
+        "stop_frame": 7181
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 7187,
+        "stop_frame": 9304
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 9312,
+        "stop_frame": 11356
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/obstacles2_subject5.npz",
+        "sha256": "d8608a4818c3c0e523793fa37b0748618d2f53f63c10d39242f80ff8cc10deb3",
+        "source": "lafan",
+        "subject": 5,
+        "name": "obstacles2_subject5",
+        "start_frame": 11362,
+        "stop_frame": 12204
+      }
+    ]
+  },
+  "dynamic_feasibility_verified": false,
+  "screening": "original mesh hulls; stored poses + quarter-frame SLERP; 1 mm floor tolerance; 50 um body clearance",
+  "notes": [
+    "Invalid intervals split clips; original files and qvel are preserved.",
+    "Subject-disjoint validation; CMU subject IDs divisible by 10 and LAFAN subject 5.",
+    "CMU subject IDs can refer to repeat performers; this is not a performer-disjoint certificate.",
+    "Timing-unverified CMU clips excluded. Props/partners/terrain are not reconstructed."
+  ],
+  "selection": {
+    "purpose": "Free T4 training trial with bounded transfer size; not the full benchmark",
+    "parent": "outputs/humanoid_light_bfm/manifest.json",
+    "parent_sha256": "6c49bec8ed05ba4015e7e7677d8d4ade4806f5105bdd1b9b1bb1647b1dc59df1",
+    "seed": 42,
+    "train_files": {
+      "cmu": 16,
+      "lafan": 4
+    },
+    "validation_files": {
+      "cmu": 2,
+      "lafan": 1
+    },
+    "intervals_and_source_hashes_unchanged": true
+  }
+}

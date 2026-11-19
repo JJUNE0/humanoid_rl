@@ -1,0 +1,15 @@
+[project]
+name = "humanoid-light-supermimic-runtime"
+version = "0.1.0"
+requires-python = ">=3.13,<3.14"
+dependencies = ["supermimic", "mjlab", "torch==2.14.1", "warp-lang==1.19.0"]
+
+[tool.uv.sources]
+supermimic = { path = "../../third_party/supermimic", editable = true }
+mjlab = { path = "../../third_party/mjlab_research", editable = true }
+warp-lang = { index = "nvidia" }
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com/"
+explicit = true

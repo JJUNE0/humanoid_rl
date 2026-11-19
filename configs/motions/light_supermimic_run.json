@@ -1,0 +1,2373 @@
+{
+  "version": 1,
+  "robot": "humanoid_light",
+  "fps": 50,
+  "screen_version": "93fd5ab448ee923eb85534db7169a68998e9989f97937e369840a72acea9f9173cd21d173a027aba3cd54fefc359041ad7a69e32f3265bf57046c376813a93120635edffc28917d07ce0223c7eabc00d26a947a519e9472510e9fef829b391c27693d50fde9411f2321e3760f843537b620f31911a87dfd8dc1749f6100ed47425",
+  "min_frames": 25,
+  "dynamic_feasibility_verified": false,
+  "notes": "All screened LAFAN1 running and sprinting sequences for Humanoid Light (train: run1/run2/sprint1 subjects 1-4, validation: run1_subject5)",
+  "splits": {
+    "train": [
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 0,
+        "stop_frame": 917
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 923,
+        "stop_frame": 961
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 967,
+        "stop_frame": 1236
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 1242,
+        "stop_frame": 2418
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 2438,
+        "stop_frame": 2780
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 2792,
+        "stop_frame": 3301
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 3307,
+        "stop_frame": 3355
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 3391,
+        "stop_frame": 3714
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 3726,
+        "stop_frame": 4142
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 4148,
+        "stop_frame": 4434
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 4475,
+        "stop_frame": 4569
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 4575,
+        "stop_frame": 4719
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 4725,
+        "stop_frame": 4977
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 4983,
+        "stop_frame": 5998
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 6004,
+        "stop_frame": 6032
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 6061,
+        "stop_frame": 6241
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 6247,
+        "stop_frame": 6415
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 6460,
+        "stop_frame": 6582
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 6601,
+        "stop_frame": 6963
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7030,
+        "stop_frame": 7334
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7340,
+        "stop_frame": 7368
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7374,
+        "stop_frame": 7570
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7576,
+        "stop_frame": 7602
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7608,
+        "stop_frame": 7879
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 7885,
+        "stop_frame": 8780
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 8786,
+        "stop_frame": 8817
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 8832,
+        "stop_frame": 8867
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 8873,
+        "stop_frame": 8931
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 8937,
+        "stop_frame": 9021
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9027,
+        "stop_frame": 9249
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9255,
+        "stop_frame": 9324
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9330,
+        "stop_frame": 9654
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9661,
+        "stop_frame": 9770
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9793,
+        "stop_frame": 9845
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9857,
+        "stop_frame": 9896
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 9902,
+        "stop_frame": 10603
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 10626,
+        "stop_frame": 10836
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject2.npz",
+        "sha256": "a31b79375e6ed7e696d882f9b0f24f326c202b8b3955fa1b93328abfbad2da9f",
+        "source": "lafan",
+        "subject": 2,
+        "name": "run1_subject2",
+        "start_frame": 10861,
+        "stop_frame": 11890
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 0,
+        "stop_frame": 346
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 352,
+        "stop_frame": 492
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 498,
+        "stop_frame": 758
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 764,
+        "stop_frame": 1051
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1057,
+        "stop_frame": 1089
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1095,
+        "stop_frame": 1229
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1235,
+        "stop_frame": 1319
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1325,
+        "stop_frame": 1358
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1364,
+        "stop_frame": 1402
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1408,
+        "stop_frame": 1838
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1855,
+        "stop_frame": 1903
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1909,
+        "stop_frame": 1955
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 1961,
+        "stop_frame": 1994
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 2000,
+        "stop_frame": 2383
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 2389,
+        "stop_frame": 2434
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 2440,
+        "stop_frame": 2605
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 2629,
+        "stop_frame": 2798
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 2891,
+        "stop_frame": 3028
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3034,
+        "stop_frame": 3137
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3143,
+        "stop_frame": 3394
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3400,
+        "stop_frame": 3539
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3569,
+        "stop_frame": 3676
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3682,
+        "stop_frame": 3746
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 3752,
+        "stop_frame": 4055
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4061,
+        "stop_frame": 4139
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4145,
+        "stop_frame": 4242
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4248,
+        "stop_frame": 4466
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4472,
+        "stop_frame": 4796
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4802,
+        "stop_frame": 4947
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 4953,
+        "stop_frame": 6136
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6143,
+        "stop_frame": 6499
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6505,
+        "stop_frame": 6550
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6556,
+        "stop_frame": 6586
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6592,
+        "stop_frame": 6707
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6714,
+        "stop_frame": 6741
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 6774,
+        "stop_frame": 7347
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 7376,
+        "stop_frame": 7782
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 7795,
+        "stop_frame": 7823
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 7829,
+        "stop_frame": 7997
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 8003,
+        "stop_frame": 8478
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 8484,
+        "stop_frame": 8659
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 8665,
+        "stop_frame": 8768
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 8774,
+        "stop_frame": 9294
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9300,
+        "stop_frame": 9374
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9411,
+        "stop_frame": 9736
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9742,
+        "stop_frame": 9778
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9784,
+        "stop_frame": 9855
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9904,
+        "stop_frame": 9944
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 9950,
+        "stop_frame": 10644
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 10650,
+        "stop_frame": 11482
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 11488,
+        "stop_frame": 11774
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject1.npz",
+        "sha256": "5e18b9c73ccad8b5cf60dfe533f3cd8fbe6ee23e59bafbc27dae64049d129eb8",
+        "source": "lafan",
+        "subject": 1,
+        "name": "run2_subject1",
+        "start_frame": 11780,
+        "stop_frame": 12240
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 0,
+        "stop_frame": 237
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 265,
+        "stop_frame": 292
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 298,
+        "stop_frame": 406
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 450,
+        "stop_frame": 496
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 502,
+        "stop_frame": 603
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 631,
+        "stop_frame": 663
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 707,
+        "stop_frame": 1008
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 1014,
+        "stop_frame": 1150
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 1156,
+        "stop_frame": 1181
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 1187,
+        "stop_frame": 1562
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 1568,
+        "stop_frame": 1762
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 1788,
+        "stop_frame": 2198
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2223,
+        "stop_frame": 2281
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2287,
+        "stop_frame": 2323
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2329,
+        "stop_frame": 2461
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2504,
+        "stop_frame": 2594
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2620,
+        "stop_frame": 2724
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2767,
+        "stop_frame": 2851
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2857,
+        "stop_frame": 2907
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 2913,
+        "stop_frame": 2973
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 3044,
+        "stop_frame": 3123
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 3148,
+        "stop_frame": 3251
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 3303,
+        "stop_frame": 4149
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 4155,
+        "stop_frame": 4305
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 4311,
+        "stop_frame": 5249
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 5272,
+        "stop_frame": 5454
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 5460,
+        "stop_frame": 5753
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 5759,
+        "stop_frame": 5870
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 5876,
+        "stop_frame": 5906
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 5913,
+        "stop_frame": 6204
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 6244,
+        "stop_frame": 6299
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 6305,
+        "stop_frame": 6337
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 6343,
+        "stop_frame": 6504
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 6510,
+        "stop_frame": 7062
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 7068,
+        "stop_frame": 8951
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 8957,
+        "stop_frame": 9107
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 9113,
+        "stop_frame": 9243
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 9249,
+        "stop_frame": 9849
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 9855,
+        "stop_frame": 9906
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 9938,
+        "stop_frame": 10021
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10027,
+        "stop_frame": 10090
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10097,
+        "stop_frame": 10154
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10219,
+        "stop_frame": 10317
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10323,
+        "stop_frame": 10606
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10612,
+        "stop_frame": 10884
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10890,
+        "stop_frame": 10956
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 10962,
+        "stop_frame": 11220
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 11226,
+        "stop_frame": 11375
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run2_subject4.npz",
+        "sha256": "f8cfe6394cb8db7334ebcc57b63dbafea2cfbedcf3064fc469f2ef01825874ae",
+        "source": "lafan",
+        "subject": 4,
+        "name": "run2_subject4",
+        "start_frame": 11381,
+        "stop_frame": 12240
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 0,
+        "stop_frame": 392
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 398,
+        "stop_frame": 427
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 465,
+        "stop_frame": 511
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 546,
+        "stop_frame": 584
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 590,
+        "stop_frame": 986
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 1040,
+        "stop_frame": 1120
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 1126,
+        "stop_frame": 1552
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 1558,
+        "stop_frame": 1623
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 1659,
+        "stop_frame": 1686
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 1692,
+        "stop_frame": 2133
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 2152,
+        "stop_frame": 2186
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 2209,
+        "stop_frame": 2248
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 2254,
+        "stop_frame": 2312
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 2318,
+        "stop_frame": 2673
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 2679,
+        "stop_frame": 3123
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 3130,
+        "stop_frame": 3156
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 3162,
+        "stop_frame": 3706
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 3736,
+        "stop_frame": 3763
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 3769,
+        "stop_frame": 3902
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 3908,
+        "stop_frame": 4873
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 4902,
+        "stop_frame": 5045
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 5051,
+        "stop_frame": 5172
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 5178,
+        "stop_frame": 5966
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 5972,
+        "stop_frame": 6033
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 6039,
+        "stop_frame": 6140
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 6170,
+        "stop_frame": 7177
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 7183,
+        "stop_frame": 7210
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 7216,
+        "stop_frame": 7903
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 7959,
+        "stop_frame": 8019
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 8034,
+        "stop_frame": 8066
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 8072,
+        "stop_frame": 8908
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 8914,
+        "stop_frame": 8978
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 9099,
+        "stop_frame": 9146
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 9152,
+        "stop_frame": 9754
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 9760,
+        "stop_frame": 9833
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 9858,
+        "stop_frame": 10796
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 10802,
+        "stop_frame": 10841
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 10847,
+        "stop_frame": 11780
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 11868,
+        "stop_frame": 11943
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 11949,
+        "stop_frame": 12786
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 12841,
+        "stop_frame": 12915
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 12933,
+        "stop_frame": 12963
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 12969,
+        "stop_frame": 13018
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject2.npz",
+        "sha256": "03dd687dcef71966b3a2fc0ad3a8a7ff70d968ec476d5716b3bfc1aefcdd14f7",
+        "source": "lafan",
+        "subject": 2,
+        "name": "sprint1_subject2",
+        "start_frame": 13024,
+        "stop_frame": 13655
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 0,
+        "stop_frame": 683
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 699,
+        "stop_frame": 775
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 810,
+        "stop_frame": 1329
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 1335,
+        "stop_frame": 1748
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 1798,
+        "stop_frame": 1865
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 1890,
+        "stop_frame": 2410
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 2476,
+        "stop_frame": 2559
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 2638,
+        "stop_frame": 2673
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 2679,
+        "stop_frame": 3323
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 3329,
+        "stop_frame": 3355
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 3446,
+        "stop_frame": 3587
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 3593,
+        "stop_frame": 4005
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 4011,
+        "stop_frame": 4135
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 4141,
+        "stop_frame": 6295
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 6301,
+        "stop_frame": 6362
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 6368,
+        "stop_frame": 6417
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 6497,
+        "stop_frame": 7508
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 7514,
+        "stop_frame": 7568
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 7574,
+        "stop_frame": 8198
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 8221,
+        "stop_frame": 8369
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 8391,
+        "stop_frame": 8417
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 8423,
+        "stop_frame": 9240
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 9246,
+        "stop_frame": 9411
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 9470,
+        "stop_frame": 10041
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 10095,
+        "stop_frame": 10270
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 10276,
+        "stop_frame": 11055
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 11071,
+        "stop_frame": 11123
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 11129,
+        "stop_frame": 12328
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 12367,
+        "stop_frame": 12392
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 12398,
+        "stop_frame": 13148
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 13154,
+        "stop_frame": 13243
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 13261,
+        "stop_frame": 13395
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 13402,
+        "stop_frame": 13454
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/sprint1_subject4.npz",
+        "sha256": "9e5acd95988be1bcad17194c4ca3537fc3b5a55929aba6e7b4acf0b3c7a4cbf6",
+        "source": "lafan",
+        "subject": 4,
+        "name": "sprint1_subject4",
+        "start_frame": 13460,
+        "stop_frame": 13655
+      }
+    ],
+    "validation": [
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 0,
+        "stop_frame": 323
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 360,
+        "stop_frame": 511
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 517,
+        "stop_frame": 603
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 609,
+        "stop_frame": 836
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 843,
+        "stop_frame": 877
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 916,
+        "stop_frame": 986
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 992,
+        "stop_frame": 1021
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 1078,
+        "stop_frame": 1126
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 1150,
+        "stop_frame": 1682
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 1688,
+        "stop_frame": 1727
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 1766,
+        "stop_frame": 1820
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 1860,
+        "stop_frame": 2015
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2021,
+        "stop_frame": 2121
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2181,
+        "stop_frame": 2229
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2254,
+        "stop_frame": 2281
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2287,
+        "stop_frame": 2380
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2429,
+        "stop_frame": 2480
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2486,
+        "stop_frame": 2535
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2552,
+        "stop_frame": 2944
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 2950,
+        "stop_frame": 3232
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3238,
+        "stop_frame": 3284
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3290,
+        "stop_frame": 3360
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3370,
+        "stop_frame": 3556
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3562,
+        "stop_frame": 3619
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3641,
+        "stop_frame": 3677
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3721,
+        "stop_frame": 3821
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 3827,
+        "stop_frame": 5681
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 5687,
+        "stop_frame": 5759
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 5765,
+        "stop_frame": 6676
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 6682,
+        "stop_frame": 6716
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 6722,
+        "stop_frame": 7171
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 7204,
+        "stop_frame": 7244
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 7250,
+        "stop_frame": 7472
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 7535,
+        "stop_frame": 7846
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 7852,
+        "stop_frame": 8265
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 8274,
+        "stop_frame": 8960
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 8966,
+        "stop_frame": 8996
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 9002,
+        "stop_frame": 9837
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 9843,
+        "stop_frame": 9971
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 9977,
+        "stop_frame": 10371
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 10418,
+        "stop_frame": 10622
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 10664,
+        "stop_frame": 11163
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 11229,
+        "stop_frame": 11698
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 11704,
+        "stop_frame": 11737
+      },
+      {
+        "path": "outputs/humanoid_light_lafan_full/motions/run1_subject5.npz",
+        "sha256": "490182e726e1da0f920cff77a3d66571c9b28c74d77564e9fa1acc03d179efda",
+        "source": "lafan",
+        "subject": 5,
+        "name": "run1_subject5",
+        "start_frame": 11743,
+        "stop_frame": 11890
+      }
+    ]
+  }
+}
